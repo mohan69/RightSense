@@ -122,6 +122,42 @@ body {
   );
 }
 
+/* ============================================
+   DARK HERO — PulseIQ / WinsProposal family
+   Used by homepage hero and dark CTA bands
+   ============================================ */
+
+.dark-hero-bg {
+  background-color: #102a4c;
+  background-image: linear-gradient(180deg, #16365f 0%, #102a4c 60%, #0c1f3a 100%);
+}
+
+.dark-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.dark-glow {
+  background:
+    radial-gradient(
+      ellipse 80% 55% at 50% 25%,
+      rgba(47, 96, 245, 0.28) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 55% 45% at 85% 35%,
+      rgba(14, 165, 164, 0.14) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 15% 60%,
+      rgba(28, 71, 216, 0.18) 0%,
+      transparent 60%
+    );
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

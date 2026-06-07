@@ -10,6 +10,8 @@ const buttonVariants = cva(
         default: "bg-brand-600 text-white hover:bg-brand-700",
         outline:
           "border border-line bg-white text-ink-900 hover:bg-canvas",
+        outlineDark:
+          "border border-white/25 bg-white/10 text-white hover:bg-white/15 backdrop-blur-sm",
         ghost: "text-ink-700 hover:bg-ink-100",
         secondary: "bg-ink-900 text-white hover:bg-ink-800",
       },
