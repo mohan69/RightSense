@@ -5,7 +5,11 @@ export function PageHero({ eyebrow, title, subtitle }: PageHeroData) {
     <section className="relative overflow-hidden bg-gradient-to-b from-ink-50 via-white to-white border-b border-line">
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 -z-10 h-[420px] bg-[radial-gradient(ellipse_at_top,rgba(28,71,216,0.08),transparent_60%)]"
+        className="absolute inset-x-0 top-0 -z-10 h-[460px] light-glow-soft"
+      />
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 -z-10 h-[460px] light-grid [mask-image:radial-gradient(ellipse_60%_55%_at_30%_30%,black,transparent_75%)]"
       />
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-14 sm:pt-20 sm:pb-16">
         <div className="max-w-3xl">

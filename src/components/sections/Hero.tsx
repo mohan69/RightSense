@@ -5,18 +5,18 @@ import { hero } from "@/lib/content";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden border-b border-line">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-gradient-to-b from-ink-50 via-white to-white"
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 -z-10 h-[640px] bg-[radial-gradient(ellipse_at_top,rgba(28,71,216,0.10),transparent_60%)]"
+        className="absolute inset-x-0 top-0 -z-10 h-[760px] light-glow"
       />
       <div
         aria-hidden
-        className="absolute inset-x-0 top-0 -z-10 h-[640px] [background-image:linear-gradient(rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_70%)]"
+        className="absolute inset-x-0 top-0 -z-10 h-[760px] light-grid [mask-image:radial-gradient(ellipse_70%_60%_at_50%_30%,black,transparent_75%)]"
       />
 
       <div className="mx-auto max-w-5xl px-6 pt-24 pb-28 sm:pt-32 sm:pb-36 text-center">

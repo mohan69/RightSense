@@ -88,6 +88,40 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* ============================================
+   RIGHTSENSE VISUAL LANGUAGE
+   Light premium SaaS — layered backgrounds
+   ============================================ */
+
+.light-grid {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.light-glow {
+  background:
+    radial-gradient(
+      ellipse 90% 60% at 50% 0%,
+      rgba(28, 71, 216, 0.14) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 85% 30%,
+      rgba(14, 165, 164, 0.06) 0%,
+      transparent 60%
+    );
+}
+
+.light-glow-soft {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    rgba(28, 71, 216, 0.08) 0%,
+    transparent 60%
+  );
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

@@ -59,11 +59,11 @@ export const platforms = [
     summary: "Enterprise Operating Intelligence Platform",
     icon: "Brain",
     description:
-      "Maps your operating model, ranks AI opportunities, and generates a 90-day execution roadmap leadership can act on.",
+      "Connects financials, strategy decks, SOPs, enterprise data, Excel trackers, emails, and meetings into an Enterprise Truth Map, executive cockpit, forecasting, what-if scenarios, and board-ready recommendations.",
     outcomes: [
-      "Margin and productivity baseline",
-      "Ranked opportunity pipeline",
-      "30/60/90 day execution plan",
+      "Enterprise Truth Map and executive cockpit",
+      "Forecast next-quarter performance with confidence bands",
+      "Simulate revenue, margin, cash, and productivity scenarios",
     ],
   },
   {
@@ -101,7 +101,7 @@ export const hero: HeroContent = {
   subheadline:
     "RightSense helps industrial and enterprise businesses move from fragmented systems, documents, spreadsheets, emails, and manual decisions to AI-powered operating intelligence.",
   support:
-    "We connect financials, strategy decks, SOPs, ERP/CRM/HRMS data, Excel trackers, proposals, emails, meetings, and workforce signals to reveal the real state of the business and recommend board-ready actions.",
+    "We connect financials, strategy decks, SOPs, ERP/CRM/HRMS data, Excel trackers, proposals, emails, meetings, and workforce signals to build the Enterprise Truth Map — and use it to forecast next-quarter performance, simulate scenarios, and recommend board-ready actions.",
   primaryCta: { label: "Book 48-Hour Diagnostic", href: "/contact" },
   secondaryCta: { label: "Explore Platforms", href: "/platforms" },
 };
@@ -143,7 +143,7 @@ export const moat: SectionContent = {
   eyebrow: "The RightSense moat",
   title: "Enterprise Truth-to-Outcome Intelligence",
   subtitle:
-    "RightSense is the only platform that connects every source of enterprise truth and converts it directly into measurable board-level outcomes.",
+    "RightSense connects the major sources of enterprise truth and converts them directly into measurable board-level outcomes.",
   note: "Each truth source is mapped to seven outcomes: revenue growth, margin improvement, cash improvement, productivity, execution speed, risk reduction, and decision clarity.",
 };
 
@@ -331,7 +331,7 @@ export const diagnostic: {
       window: "Hour 0–4",
       title: "Secure data intake",
       description:
-        "Read-only access to ERP, CRM, HRMS, MES, finance, and the Excel trackers that actually run the business.",
+        "Read-only access, exports, or secure uploads from ERP, CRM, HRMS, finance, Excel trackers, documents, and selected collaboration sources — whatever fits your IT and security posture.",
     },
     {
       num: "02",
@@ -410,7 +410,7 @@ export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
 export const ctaSection = {
   title: "Move from fragmented data to a connected, board-ready view of your enterprise.",
   subtitle:
-    "Start with a 48-Hour Enterprise Intelligence Diagnostic. No PoC. No slideware. Decisions you can act on.",
+    "Start with a 48-Hour Enterprise Intelligence Diagnostic. No long transformation program. No generic AI demo. Just a focused diagnostic with decisions leadership can act on.",
   primaryCta: { label: "Book 48-Hour Diagnostic", href: "/contact" },
   secondaryCta: { label: "Talk to a Founder", href: "/about" },
 } as const;
@@ -554,7 +554,7 @@ export const platformsPage = {
   ] satisfies PortfolioRole[],
   connectionTitle: "How the three connect",
   connectionBody:
-    "Revenue intelligence (WinsProposal) + operating intelligence (PulseIQ) + talent intelligence (TalentPulse) form a single enterprise truth layer. Revenue signals feed operating decisions. Operating decisions expose talent and capacity gaps. Talent and capacity signals feed revenue planning. The loop compounds.",
+    "Revenue intelligence (WinsProposal) + operating intelligence (PulseIQ) + talent intelligence (TalentPulse) form a single enterprise truth layer. PulseIQ turns that layer into a live executive cockpit with forecasting and what-if scenarios. Revenue signals feed operating decisions. Operating decisions expose talent and capacity gaps. Talent and capacity signals feed revenue planning. The loop compounds.",
   cta: {
     title: "Start with PulseIQ. Add the others when ready.",
     subtitle:
@@ -569,12 +569,12 @@ export const pulseiqPage = {
     eyebrow: "PulseIQ",
     title: "PulseIQ: Enterprise Operating Intelligence Platform",
     subtitle:
-      "Connect every source of enterprise truth — financials, strategy decks, SOPs, ERP/CRM/HRMS, Excel trackers, documents, emails, meetings — into one operating intelligence layer the leadership team can actually align on.",
+      "Connects financials, strategy decks, SOPs, enterprise data, Excel trackers, emails, and meetings into an Enterprise Truth Map, executive cockpit, forecasting, what-if scenarios, and board-ready recommendations.",
   },
   truthMap: {
     title: "Enterprise Truth Map",
     subtitle:
-      "PulseIQ builds a connected map of the five truth layers that drive every operating decision.",
+      "PulseIQ builds a connected map of the five truth layers that drive every operating decision — and uses it to forecast performance and simulate the moves leadership is considering.",
     layers: [
       {
         id: "financial",
@@ -658,7 +658,7 @@ export const pulseiqPage = {
   forecasting: {
     title: "Forecasting",
     subtitle:
-      "Three horizons, refreshed continuously, presented with confidence bands.",
+      "Forecast next-quarter performance and simulate revenue, margin, cash, and productivity scenarios — before leadership commits to action.",
     horizons: [
       {
         label: "Next month",
