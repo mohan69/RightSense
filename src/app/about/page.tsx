@@ -33,6 +33,19 @@ export default function AboutPage() {
       <FoundingTeamSection />
 
       <section className="bg-white">
+        <div className="mx-auto max-w-4xl px-6 py-14 sm:py-16">
+          <div className="rounded-2xl border border-line bg-canvas p-7 sm:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-700">
+              {aboutPage.founderExecution.title}
+            </p>
+            <p className="mt-4 text-base sm:text-lg text-ink-700 leading-relaxed">
+              {aboutPage.founderExecution.body}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-canvas">
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
           <SectionHeader title={aboutPage.founder.title} />
           <p className="mt-6 text-lg text-ink-700 leading-relaxed">
@@ -41,7 +54,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-canvas">
+      <section className="bg-white">
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
           <SectionHeader title={aboutPage.whyAINative.title} />
           <p className="mt-6 text-lg text-ink-700 leading-relaxed">
@@ -50,14 +63,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <SectionHeader title={aboutPage.principles.title} />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {aboutPage.principles.items.map((p) => (
               <div
                 key={p.name}
-                className="rounded-xl border border-line bg-canvas p-6"
+                className="rounded-xl border border-line bg-white p-6"
               >
                 <div className="flex h-2 w-10 rounded-full bg-brand-100" />
                 <h3 className="mt-4 text-base font-semibold text-ink-900">
@@ -72,9 +85,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-canvas">
+      <section className="bg-white">
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
-          <div className="rounded-2xl border border-line bg-white p-7">
+          <div className="rounded-2xl border border-line bg-canvas p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-500">
               Company
             </p>
@@ -85,6 +98,14 @@ export default function AboutPage() {
               {aboutPage.company.location}
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-canvas">
+        <div className="mx-auto max-w-3xl px-6 py-14 sm:py-16 text-center">
+          <p className="text-base sm:text-lg font-medium text-ink-700 leading-relaxed">
+            {aboutPage.customerTrust.body}
+          </p>
         </div>
       </section>
 

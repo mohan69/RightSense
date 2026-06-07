@@ -1223,7 +1223,7 @@ export const aboutPage = {
     eyebrow: "About RightSense",
     title: "Built by Enterprise Transformation Practitioners, Not Generic AI Consultants",
     subtitle:
-      "RightSense Technologies exists to help industrial and enterprise leaders turn messy reality into board-ready action — without the slideware.",
+      "RightSense Technologies helps industrial and enterprise leaders turn fragmented systems, documents, decisions, and operating signals into board-ready action.",
   },
   overview: {
     title: "Who we are",
@@ -1249,7 +1249,7 @@ export const aboutPage = {
         id: "mohan-babu",
         name: "Mohan Babu",
         role: "Co-Founder & CEO",
-        bio: "Mohan Babu brings deep experience across artificial intelligence, entrepreneurship, PLM and ERP enterprise systems, program management, cybersecurity, leadership, and communication. He leads RightSense's AI-native enterprise intelligence vision across PulseIQ, WinsProposal, and TalentPulse, with a focus on measurable outcomes across revenue, margin, productivity, and execution.",
+        bio: "Mohan Babu brings 30+ years of experience across enterprise systems, industrial manufacturing, ERP, PLM, proposal engineering, product configuration, program management, and AI-native transformation. He leads RightSense's platform vision across PulseIQ, WinsProposal, and TalentPulse, focused on measurable outcomes across revenue, margin, productivity, and execution.",
         linkedin: "https://in.linkedin.com/in/mohan-babu-77802217",
         image: "/founders/mohan-babu.jpg",
         initials: "MB",
@@ -1258,7 +1258,7 @@ export const aboutPage = {
         id: "suryatej-sonawane",
         name: "Suryatej Sonawane",
         role: "Co-Founder",
-        bio: "Suryatej Sonawane is an experienced professional in product development, customer experience, and account management. He brings more than two decades of IT experience across professional services and has been involved in AI, SaaS, ML, LLM, and product development opportunities.",
+        bio: "Suryatej Sonawane brings more than two decades of experience across product development, customer experience, account management, professional services, SaaS, AI, ML, and LLM-led product opportunities.",
         linkedin: "https://www.linkedin.com/in/sonawane-suryatej-45bb544/",
         image: "/founders/suryatej-sonawane.jpg",
         initials: "SS",
@@ -1267,7 +1267,7 @@ export const aboutPage = {
         id: "ayyala-pavithran",
         name: "Ayyala Pavithran",
         role: "Co-Founder",
-        bio: "Ayyala Pavithran is a seasoned IT professional with over two decades of experience leading digital transformation, business consulting, and IT services for global manufacturing and pharma companies. He has led CIO-level responsibilities in large organizations and brings strong strategy, GTM, and transformation experience.",
+        bio: "Ayyala Pavithran brings over two decades of experience in digital transformation, business consulting, IT services, manufacturing, pharma, CIO-level leadership, strategy, GTM, and enterprise transformation.",
         linkedin: "https://www.linkedin.com/in/ayyalapavi/",
         image: "/founders/ayyala-pavithran.jpg",
         initials: "AP",
@@ -1306,6 +1306,13 @@ export const aboutPage = {
   company: {
     name: "RightSense Technologies Private Limited",
     location: "Bengaluru, India",
+  },
+  founderExecution: {
+    title: "Founder-led execution model",
+    body: "RightSense is currently operated as a lean founder-led company, supported by specialist partners and AI-native delivery workflows. This allows us to move fast, keep senior ownership close to customers, and focus every engagement on measurable business outcomes.",
+  },
+  customerTrust: {
+    body: "We start small, prove value quickly, and expand only when the business case is clear.",
   },
   cta: {
     title: "Start a 48-Hour Diagnostic conversation.",
