@@ -19,11 +19,11 @@ export function PageHero({ eyebrow, title, subtitle }: PageHeroData) {
           <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white text-balance">
             {title}
           </h1>
-          {subtitle ? (
-            <p className="mt-5 text-lg text-blue-100/80 leading-relaxed">
-              {subtitle}
-            </p>
-          ) : null}
+           {subtitle ? (
+             <p className="mt-5 text-lg text-blue-50 leading-relaxed">
+               {subtitle}
+             </p>
+           ) : null}
         </div>
       </div>
     </section>
