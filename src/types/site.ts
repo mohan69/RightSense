@@ -185,6 +185,39 @@ export type PlanPhase = {
   description: string;
 };
 
+export type WhenNeededCard = {
+  text: string;
+};
+
+export type WhenLeadershipNeedsThis = {
+  title: string;
+  subtitle: string;
+  cards: WhenNeededCard[];
+};
+
+export type SampleOutputCard = {
+  title: string;
+  description: string;
+};
+
+export type SampleOutput = {
+  title: string;
+  subtitle: string;
+  cards: SampleOutputCard[];
+};
+
+export type MinimumRequired = {
+  title: string;
+  subtitle: string;
+  items: string[];
+  closing: string;
+};
+
+export type DataAccess = {
+  title: string;
+  points: string[];
+};
+
 export type Principle = {
   name: string;
   description: string;

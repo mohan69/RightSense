@@ -3,6 +3,7 @@ import type {
   Capability,
   CockpitMetric,
   CtaLink,
+  DataAccess,
   DeploymentOption,
   DiagnosticStep,
   FitWithPlatform,
@@ -13,6 +14,7 @@ import type {
   HowItWorksStep,
   Industry,
   IndustryDetail,
+  MinimumRequired,
   MoatPageContent,
   NavItem,
   Outcome,
@@ -22,11 +24,13 @@ import type {
   Principle,
   ProblemPoint,
   RecommendationField,
+  SampleOutput,
   SectionContent,
   TargetRole,
   TruthLayer,
   TruthSource,
   WhatIfScenario,
+  WhenLeadershipNeedsThis,
   WhyRightSense,
 } from "@/types/site";
 
@@ -1051,11 +1055,80 @@ export const assessmentPage = {
     ] satisfies PlanPhase[],
   },
   cta: {
-    title: "Book a 48-Hour Diagnostic.",
+    title: "Book a 48-Hour Enterprise Intelligence Diagnostic",
     subtitle:
-      "Bring your financials, your strategy deck, and your Excel trackers. Leave with a board-ready view of enterprise truth.",
-    primaryCta: { label: "Request Diagnostic Call", href: "/contact" },
+      "Bring the sources you already have. Leave with a board-ready view of enterprise truth, business gaps, forecast scenarios, and a 90-day action plan.",
+    primaryCta: { label: "Book a 48-Hour Diagnostic", href: "/contact" },
   },
+  whenLeadershipNeedsThis: {
+    title: "When leadership needs this diagnostic",
+    subtitle:
+      "Use this when leadership needs a trusted view of the business before committing to a major decision, board review, AI program, revenue push, margin improvement, or operating reset.",
+    cards: [
+      { text: "Board meeting is coming, but reports do not reconcile" },
+      { text: "Revenue target is at risk and pipeline clarity is poor" },
+      { text: "Margins are leaking but root causes are unclear" },
+      { text: "ERP, Excel, finance, and operations numbers do not match" },
+      { text: "AI initiatives are being discussed, but the business case is unclear" },
+      { text: "Promoter, CEO, or CFO needs one trusted view before committing to action" },
+    ],
+  } satisfies WhenLeadershipNeedsThis,
+  sampleOutput: {
+    title: "Sample diagnostic output",
+    subtitle:
+      "The diagnostic does not stop at observations. It produces quantified findings, what-if scenarios, and a leadership action plan.",
+    cards: [
+      {
+        title: "Enterprise Truth Map",
+        description:
+          "Official financials show 8% growth, strategy target is 20%, and current operating data supports only 11%. PulseIQ highlights the gap and the drivers.",
+      },
+      {
+        title: "Revenue Gap",
+        description:
+          "Current forecast shows a revenue gap against plan. Proposal win rate, delayed approvals, customer concentration, and pipeline quality are quantified.",
+      },
+      {
+        title: "Margin Leakage",
+        description:
+          "Low-margin products, discount leakage, supplier cost escalation, inventory pressure, and rework are ranked by impact and controllability.",
+      },
+      {
+        title: "90-Day Action Plan",
+        description:
+          "Top actions are ranked by impact, effort, owner role, confidence level, and KPI so leadership can act immediately.",
+      },
+    ],
+  } satisfies SampleOutput,
+  midCta: {
+    title: "Want to know what your data can reveal in 48 hours?",
+    primaryCta: { label: "Book Diagnostic Call", href: "/contact" },
+    secondaryCta: { label: "Ask What Data Is Needed", href: "/contact" },
+  } as const,
+  minimumRequired: {
+    title: "Minimum required to start",
+    subtitle:
+      "The diagnostic is designed for busy leadership teams. We start with what is available and expand only where it improves the business answer.",
+    items: [
+      "Latest financial statements or management accounts",
+      "Latest business review, strategy deck, or board deck",
+      "Sales pipeline, order backlog, or revenue tracker",
+      "Key Excel trackers that leadership relies on",
+      "60-minute leadership context call",
+    ],
+    closing: "Everything else is optional and can be added as available.",
+  } satisfies MinimumRequired,
+  dataAccess: {
+    title: "Data access and confidentiality",
+    points: [
+      "Read-only access, exports, or secure uploads",
+      "Only agreed business sources are analyzed",
+      "No employee surveillance",
+      "Email and meeting inputs are optional and limited to agreed business themes",
+      "Source-level evidence is retained for leadership review",
+      "Customer data is used only for the diagnostic engagement",
+    ],
+  } satisfies DataAccess,
 } as const;
 
 export const industriesPage = {
