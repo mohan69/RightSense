@@ -1061,9 +1061,9 @@ export const assessmentPage = {
     primaryCta: { label: "Book a 48-Hour Diagnostic", href: "/contact" },
   },
   whenLeadershipNeedsThis: {
-    title: "When leadership needs this diagnostic",
+    title: "Signs Leadership Needs This Diagnostic Now",
     subtitle:
-      "Use this when leadership needs a trusted view of the business before committing to a major decision, board review, AI program, revenue push, margin improvement, or operating reset.",
+      "Use this when leadership needs a trusted view of revenue, margin, cash, risk, and execution before a board review, AI program, operating reset, or major business decision.",
     cards: [
       { text: "Board meeting is coming, but reports do not reconcile" },
       { text: "Revenue target is at risk and pipeline clarity is poor" },
