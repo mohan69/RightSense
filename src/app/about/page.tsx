@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTASection } from "@/components/sections/CTASection";
+import { FoundingTeamSection } from "@/components/sections/FoundingTeamSection";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { aboutPage } from "@/lib/content";
@@ -29,7 +30,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-canvas">
+      <FoundingTeamSection />
+
+      <section className="bg-white">
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
           <SectionHeader title={aboutPage.founder.title} />
           <p className="mt-6 text-lg text-ink-700 leading-relaxed">
@@ -38,7 +41,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-canvas">
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
           <SectionHeader title={aboutPage.whyAINative.title} />
           <p className="mt-6 text-lg text-ink-700 leading-relaxed">
@@ -47,14 +50,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-canvas">
+      <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <SectionHeader title={aboutPage.principles.title} />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {aboutPage.principles.items.map((p) => (
               <div
                 key={p.name}
-                className="rounded-xl border border-line bg-white p-6"
+                className="rounded-xl border border-line bg-canvas p-6"
               >
                 <div className="flex h-2 w-10 rounded-full bg-brand-100" />
                 <h3 className="mt-4 text-base font-semibold text-ink-900">
@@ -69,9 +72,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-canvas">
         <div className="mx-auto max-w-4xl px-6 py-16 sm:py-20">
-          <div className="rounded-2xl border border-line bg-canvas p-7">
+          <div className="rounded-2xl border border-line bg-white p-7">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-500">
               Company
             </p>

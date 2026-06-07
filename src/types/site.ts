@@ -233,3 +233,19 @@ export type WhyRightSense = {
   subtitle: string;
   points: WhyRightSensePoint[];
 };
+
+export type Founder = {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  linkedin: string;
+  image: string;
+  initials: string;
+};
+
+export type FoundingTeam = {
+  title: string;
+  subtitle: string;
+  members: Founder[];
+};

@@ -8,6 +8,7 @@ import type {
   FitWithPlatform,
   ForecastHorizon,
   FormField,
+  FoundingTeam,
   HeroContent,
   HowItWorksStep,
   Industry,
@@ -1239,6 +1240,40 @@ export const aboutPage = {
     body:
       "For two decades, BI and ERP have promised an integrated view of the business. The reality in most enterprises is fragmented systems, fragmented decisions, and dashboards no one trusts. Modern data and AI stacks finally make it possible to build a connected truth layer — without a five-year integration program. RightSense is built ground-up on that stack.",
   },
+  foundingTeam: {
+    title: "Founding Team",
+    subtitle:
+      "RightSense Technologies Private Limited was founded in 2018 by enterprise technology, product, and transformation practitioners with deep experience across ERP, PLM, AI, cybersecurity, product development, customer experience, and digital transformation.",
+    members: [
+      {
+        id: "mohan-babu",
+        name: "Mohan Babu",
+        role: "Co-Founder & CEO",
+        bio: "Mohan Babu brings deep experience across artificial intelligence, entrepreneurship, PLM and ERP enterprise systems, program management, cybersecurity, leadership, and communication. He leads RightSense's AI-native enterprise intelligence vision across PulseIQ, WinsProposal, and TalentPulse, with a focus on measurable outcomes across revenue, margin, productivity, and execution.",
+        linkedin: "https://in.linkedin.com/in/mohan-babu-77802217",
+        image: "/founders/mohan-babu.jpg",
+        initials: "MB",
+      },
+      {
+        id: "suryatej-sonawane",
+        name: "Suryatej Sonawane",
+        role: "Co-Founder",
+        bio: "Suryatej Sonawane is an experienced professional in product development, customer experience, and account management. He brings more than two decades of IT experience across professional services and has been involved in AI, SaaS, ML, LLM, and product development opportunities.",
+        linkedin: "https://www.linkedin.com/in/sonawane-suryatej-45bb544/",
+        image: "/founders/suryatej-sonawane.jpg",
+        initials: "SS",
+      },
+      {
+        id: "ayyala-pavithran",
+        name: "Ayyala Pavithran",
+        role: "Co-Founder",
+        bio: "Ayyala Pavithran is a seasoned IT professional with over two decades of experience leading digital transformation, business consulting, and IT services for global manufacturing and pharma companies. He has led CIO-level responsibilities in large organizations and brings strong strategy, GTM, and transformation experience.",
+        linkedin: "https://www.linkedin.com/in/ayyalapavi/",
+        image: "/founders/ayyala-pavithran.jpg",
+        initials: "AP",
+      },
+    ],
+  } satisfies FoundingTeam,
   principles: {
     title: "Operating principles",
     items: [
