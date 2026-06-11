@@ -50,7 +50,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-2">
-          <Link href="/contact">
+          <Link href="/48-hour-diagnostic">
             <Button size="sm">Book Diagnostic</Button>
           </Link>
         </div>
@@ -79,7 +79,7 @@ export function Nav() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/contact" onClick={closeMenu} className="mt-2">
+            <Link href="/48-hour-diagnostic" onClick={closeMenu} className="mt-2">
               <Button className="w-full">Book Diagnostic</Button>
             </Link>
           </nav>

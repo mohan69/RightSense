@@ -5,6 +5,7 @@ import type {
   CtaLink,
   DataAccess,
   DeploymentOption,
+  DiagnosticPageContent,
   DiagnosticStep,
   FitWithPlatform,
   ForecastHorizon,
@@ -37,15 +38,16 @@ import type {
 export const siteConfig = {
   name: "RightSense Technologies",
   shortName: "RightSense",
-  tagline: "Enterprise Truth-to-Outcome Intelligence",
+  tagline: "Enterprise Operating Intelligence for industrial and project-driven businesses.",
   description:
-    "AI-native enterprise intelligence for revenue, margin, productivity, and execution.",
+    "Enterprise Operating Intelligence for industrial and project-driven businesses.",
   url: "https://rightsense.in",
   contactEmail: "contact@rightsense.in",
 } as const;
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Diagnostic", href: "/48-hour-diagnostic" },
   { label: "Moat", href: "/moat" },
   { label: "Platforms", href: "/platforms" },
   { label: "PulseIQ", href: "/pulseiq" },
@@ -100,14 +102,14 @@ export const platforms = [
 ] as const;
 
 export const hero: HeroContent = {
-  eyebrow: "RightSense Technologies",
+  eyebrow: "Enterprise Operating Intelligence for industrial and project-driven businesses.",
   headline:
     "AI-Native Enterprise Intelligence for Revenue, Margin, Productivity, and Execution",
   subheadline:
     "RightSense helps industrial and enterprise businesses move from fragmented systems, documents, spreadsheets, emails, and manual decisions to AI-powered operating intelligence.",
   support:
     "We connect financials, strategy decks, SOPs, ERP/CRM/HRMS data, Excel trackers, proposals, emails, meetings, and workforce signals to build the Enterprise Truth Map — and use it to forecast next-quarter performance, simulate scenarios, and recommend board-ready actions.",
-  primaryCta: { label: "Book 48-Hour Diagnostic", href: "/contact" },
+  primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
   secondaryCta: { label: "Explore Platforms", href: "/platforms" },
 };
 
@@ -415,8 +417,8 @@ export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
 export const ctaSection = {
   title: "Move from fragmented data to a connected, board-ready view of your enterprise.",
   subtitle:
-    "Start with a 48-Hour Enterprise Intelligence Diagnostic. No long transformation program. No generic AI demo. Just a focused diagnostic with decisions leadership can act on.",
-  primaryCta: { label: "Book 48-Hour Diagnostic", href: "/contact" },
+    "Start with a 48-Hour Enterprise Operating Intelligence Diagnostic. No long transformation program. No generic AI demo. Just a focused diagnostic with decisions leadership can act on.",
+  primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
   secondaryCta: { label: "Talk to a Founder", href: "/about" },
 } as const;
 
@@ -1131,6 +1133,278 @@ export const assessmentPage = {
   } satisfies DataAccess,
 } as const;
 
+export const diagnosticPage: DiagnosticPageContent = {
+  hero: {
+    eyebrow: "PulseIQ",
+    title: "48-Hour Enterprise Operating Intelligence Diagnostic",
+    subtitle:
+      "A paid entry engagement that connects your fragmented systems, documents, and decisions into a board-ready view of enterprise truth — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
+  },
+  whoItsFor: {
+    title: "Who this diagnostic is for",
+    roles: [
+      "CEOs, COOs, CFOs, and CROs who need a single current view of the business before a board review, investor meeting, or major decision",
+      "Promoters and founder-operators preparing for board or investor reviews",
+      "Transformation and strategy heads launching an AI or operating-model program",
+      "Compliance and risk leaders assessing readiness across standards, vendor governance, and regulatory exposure",
+      "Board advisors supporting a portfolio company through a turnaround, scale-up, or compliance upgrade",
+    ],
+  },
+  painSection: {
+    title: "Enterprise leaders do not lack data. They lack connected truth.",
+    subtitle:
+      "Decisions stall because the business is a hundred disconnected sources of partial truth — owned by no one, reconciled by no one, and out of date by the time the meeting starts. The 48-Hour Diagnostic cuts through this in two days.",
+    points: [
+      "ERPs, CRMs, HRMS, and MES speak different languages and never reconcile cleanly",
+      "Financial reports, operational data, and strategic plans tell three different stories — and none match",
+      "Excel trackers multiply with every project, customer, and SKU — and no one owns the totals",
+      "Proposals, emails, and meetings hide the real pipeline, decisions, and ownership",
+      "Compliance documentation is fragmented across drives, emails, and tribal knowledge — audit readiness is unknown",
+      "Vendor and supplier data lives in procurement systems, contracts, and spreadsheets that are never reconciled",
+      "Workforce signals — load, attrition, skill gaps — never reach the leadership table",
+    ],
+  },
+  inputsSummary: {
+    title: "What we ingest",
+    items: [
+      "Audited financial statements and management accounts",
+      "Board decks and management presentations",
+      "Strategy documents and annual operating plans",
+      "Standard operating procedures and policy documents",
+      "Critical Excel trackers that run the business day-to-day",
+      "ERP, CRM, and HRMS exports for the relevant period",
+      "Proposal pipeline and recent bid submissions",
+      "Sales pipeline and opportunity reports",
+      "Operations, quality, and production reports",
+      "Compliance documentation, certifications, and audit evidence",
+      "Vendor and supplier registers, contracts, and performance data",
+      "AI governance and data policy documents (if available)",
+      "Shared drive documents (with consent)",
+      "Optional: summarized email and meeting themes (with consent)",
+    ],
+  },
+  pillarsSection: {
+    title: "Six pillars of the 48-Hour Diagnostic",
+    subtitle:
+      "The diagnostic examines your business across six connected dimensions. Each pillar produces a quantified readiness score, gap analysis, and prioritized improvement actions.",
+    pillars: [
+      {
+        num: "01",
+        title: "Revenue & Proposal Intelligence",
+        summary: "Win rate, pipeline health, pricing discipline, and proposal cycle efficiency.",
+        items: [
+          "Proposal win/loss analysis and pipeline quality scoring",
+          "Pricing variance and discount leakage quantification",
+          "Quote-to-order cycle time and bottleneck identification",
+          "Renewal and expansion revenue visibility",
+          "Customer concentration risk and revenue dependency mapping",
+        ],
+      },
+      {
+        num: "02",
+        title: "Operating Intelligence",
+        summary: "Enterprise truth map, forecast accuracy, and execution visibility.",
+        items: [
+          "Enterprise Truth Map — one current view of the business leadership can align on",
+          "Forecast accuracy assessment with confidence bands and driver analysis",
+          "Process adherence scoring against documented SOPs and RACI",
+          "Decision flow mapping — who decides, on what data, and how fast",
+          "Cross-functional data reconciliation gaps across ERP, CRM, and finance",
+        ],
+      },
+      {
+        num: "03",
+        title: "Margin & Productivity Leakage",
+        summary: "Cost-to-serve, rework, waste, and working capital leak detection.",
+        items: [
+          "Cost-to-serve analysis by product, customer, and channel",
+          "Rework and quality cost quantification across production and service",
+          "Working capital leak detection in receivables, inventory, and supplier terms",
+          "Productivity baseline measurement across functions and shifts",
+          "Margin leakage ranked by impact and controllability",
+        ],
+      },
+      {
+        num: "04",
+        title: "Compliance & Standards Readiness",
+        summary: "ISO readiness, technical standards compliance, and audit preparedness.",
+        items: [
+          "Gap assessment against ISO 9001, 14001, 45001, 27001, 42001, 50001 standards",
+          "Technical standards compliance review (API, ASME, ANSI, IEC, ISA, customer-specific)",
+          "Statutory documentation and audit evidence readiness",
+          "Policy, SOP, and procedure documentation completeness scoring",
+          "Corrective action and non-conformance tracking maturity",
+        ],
+      },
+      {
+        num: "05",
+        title: "Vendor/Supplier/Ecosystem Readiness",
+        summary: "Supplier governance, prequalification status, and ecosystem risk.",
+        items: [
+          "Vendor registration and prequalification status assessment",
+          "Supplier contract compliance and performance scorecard",
+          "Multi-tier supply chain visibility and risk mapping",
+          "Procurement-to-payment cycle efficiency and control gaps",
+          "Supplier governance maturity and escalation framework readiness",
+        ],
+      },
+      {
+        num: "06",
+        title: "AI Governance & Trusted Agent Readiness",
+        summary: "AI policy, data governance, and organizational readiness for AI-native operations.",
+        items: [
+          "AI policy and data governance framework maturity assessment",
+          "Data quality, lineage, and access control readiness scoring",
+          "Organizational readiness for AI-native workflows and decision support",
+          "AI use case inventory and risk classification",
+          "Trusted agent readiness — role-based AI access, oversight, and audit trail",
+        ],
+      },
+    ],
+  },
+  process: {
+    title: "How the 48 hours are structured",
+    steps: [
+      {
+        num: "01",
+        window: "Hour 0–4",
+        title: "Secure data intake and scope alignment",
+        description:
+          "We align on the business question, the sources to ingest, and the data owners. Read-only access, exports, or secure uploads from ERP, CRM, HRMS, finance, Excel trackers, documents, and compliance systems.",
+      },
+      {
+        num: "02",
+        window: "Hour 4–12",
+        title: "Connect, extract, and reconcile",
+        description:
+          "Connect to source systems, verify ingestion, and reconcile entity definitions across them. Compliance documentation and vendor data are catalogued alongside financial and operational sources.",
+      },
+      {
+        num: "03",
+        window: "Hour 12–28",
+        title: "Run the six-pillar diagnostic",
+        description:
+          "Across all six pillars — revenue, operations, margin, compliance, vendor, and AI — we run the gap analysis, readiness scoring, and opportunity quantification.",
+      },
+      {
+        num: "04",
+        window: "Hour 28–40",
+        title: "Build the truth map and action plan",
+        description:
+          "Generate the Enterprise Truth Map, ranked opportunity set with quantified impact ranges, risk register, and a 30/60/90 day execution plan with named owners and KPIs.",
+      },
+      {
+        num: "05",
+        window: "Hour 40–48",
+        title: "Executive readout and board-ready package",
+        description:
+          "Deliver a board-ready briefing with the leadership team. Includes the truth map, six-pillar scorecard, prioritized actions, and the complete document package.",
+      },
+    ],
+  },
+  deliverables: {
+    title: "What you walk away with",
+    items: [
+      {
+        title: "Enterprise Truth Map",
+        description:
+          "One current view of the business leadership can align on — connecting financial, operational, strategic, process, collaboration, revenue, and talent truth.",
+      },
+      {
+        title: "Six-Pillar Readiness Scorecard",
+        description:
+          "Quantified readiness scores across revenue intelligence, operating intelligence, margin leakage, compliance, vendor ecosystem, and AI governance — with gap analysis.",
+      },
+      {
+        title: "Standards Compliance Gap Report",
+        description:
+          "Readiness mapping against ISO standards, technical standards, and customer-specific compliance requirements with prioritized remediation actions.",
+      },
+      {
+        title: "Revenue, Margin & Cash Opportunity Map",
+        description:
+          "10–15 prioritized opportunities with quantified impact ranges, ranked by feasibility and business value.",
+      },
+      {
+        title: "Vendor & Ecosystem Risk Register",
+        description:
+          "Supplier governance maturity, prequalification gaps, and multi-tier supply chain risk assessment.",
+      },
+      {
+        title: "30/60/90 Day Execution Plan",
+        description:
+          "Named owners, milestones, KPIs, and confidence levels for every recommended action.",
+      },
+      {
+        title: "Board-Ready Briefing Document",
+        description:
+          "Designed to anchor the next leadership review, board meeting, or investor discussion.",
+      },
+    ],
+  },
+  standards: {
+    title: "Compliance & Standards Readiness Coverage",
+    subtitle:
+      "The diagnostic assesses documentation readiness, process adherence, evidence gaps, and improvement roadmaps across the following standards and frameworks. RightSense does not provide certification or formal approvals.",
+    categories: [
+      {
+        name: "ISO Management System Standards",
+        items: [
+          "ISO 9001 — Quality management systems",
+          "ISO 14001 — Environmental management systems",
+          "ISO 45001 — Occupational health and safety",
+          "ISO 27001 — Information security management",
+          "ISO 42001 — Artificial intelligence management systems",
+          "ISO 50001 — Energy management systems",
+        ],
+      },
+      {
+        name: "Technical & Industry Standards",
+        items: [
+          "API specifications and standards compliance",
+          "ASME boiler and pressure vessel code compliance",
+          "ANSI standards for industrial equipment and processes",
+          "IEC standards for electrical and electronic systems",
+          "ISA standards for automation and control systems",
+          "Customer-specific technical standards and specifications",
+        ],
+      },
+      {
+        name: "Vendor & Supplier Governance",
+        items: [
+          "Vendor registration and prequalification documentation",
+          "Supplier code of conduct compliance",
+          "Statutory documentation and audit evidence readiness",
+          "Supplier governance maturity assessment",
+          "Multi-tier supply chain documentation and traceability",
+        ],
+      },
+    ],
+    disclaimer:
+      "The diagnostic identifies readiness gaps, documentation gaps, workflow risks, and improvement opportunities. Formal certification or legal/statutory compliance must be confirmed by accredited certification bodies, auditors, or qualified legal/statutory professionals.",
+  },
+  security: {
+    title: "Data access and confidentiality",
+    points: [
+      "Read-only access, exports, or secure uploads — your choice",
+      "Only agreed business sources are analyzed",
+      "No employee surveillance",
+      "Email and meeting inputs are optional and limited to agreed business themes",
+      "Source-level evidence is retained for leadership review",
+      "Customer data is used only for the diagnostic engagement",
+    ],
+  },
+  cta: {
+    title: "Book a 48-Hour Enterprise Operating Intelligence Diagnostic",
+    subtitle:
+      "Bring your business question, your financials, your compliance documentation, and your strategy deck. We will show you what connected enterprise truth looks like — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
+    primaryCta: { label: "Book 48-Hour Diagnostic", href: "/contact" },
+    secondaryCta: { label: "Talk to a Founder", href: "/about" },
+  },
+  disclaimer:
+    "RightSense does not provide ISO certification, legal certification, statutory audit, regulatory approval, or formal customer approval. The diagnostic identifies readiness gaps, workflow risks, documentation gaps, and improvement opportunities. Formal certification or legal/statutory compliance must be confirmed by accredited certification bodies, auditors, or qualified legal/statutory professionals.",
+} as const;
+
 export const industriesPage = {
   hero: {
     eyebrow: "Industry focus",
@@ -1391,7 +1665,7 @@ export const aboutPage = {
     title: "Start a 48-Hour Diagnostic conversation.",
     subtitle:
       "Bring your business question, your financials, and your strategy deck. We will show you what the truth map looks like in your business.",
-    primaryCta: { label: "Book an Assessment", href: "/assessment" },
+    primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
   },
 } as const;
 

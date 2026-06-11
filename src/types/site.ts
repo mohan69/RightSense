@@ -282,3 +282,67 @@ export type FoundingTeam = {
   subtitle: string;
   members: Founder[];
 };
+
+export type DiagnosticPillar = {
+  num: string;
+  title: string;
+  summary: string;
+  items: string[];
+};
+
+export type DiagnosticStep48 = {
+  num: string;
+  window: string;
+  title: string;
+  description: string;
+};
+
+export type DiagnosticDeliverable = {
+  title: string;
+  description: string;
+};
+
+export type DiagnosticPageContent = {
+  hero: PageHeroData;
+  whoItsFor: {
+    title: string;
+    roles: string[];
+  };
+  painSection: {
+    title: string;
+    subtitle: string;
+    points: string[];
+  };
+  inputsSummary: {
+    title: string;
+    items: string[];
+  };
+  pillarsSection: {
+    title: string;
+    subtitle: string;
+    pillars: DiagnosticPillar[];
+  };
+  process: {
+    title: string;
+    steps: DiagnosticStep48[];
+  };
+  deliverables: {
+    title: string;
+    items: DiagnosticDeliverable[];
+  };
+  standards: {
+    title: string;
+    subtitle: string;
+    categories: {
+      name: string;
+      items: string[];
+    }[];
+    disclaimer: string;
+  };
+  security: {
+    title: string;
+    points: string[];
+  };
+  cta: PageCta;
+  disclaimer: string;
+};
