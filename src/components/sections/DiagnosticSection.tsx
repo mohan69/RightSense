@@ -10,7 +10,7 @@ export function DiagnosticSection() {
         <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
           <div className="lg:col-span-2">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-600">
-              PulseIQ flagship
+              RightSense flagship
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-900 text-balance">
               {diagnostic.title}

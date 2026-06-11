@@ -104,7 +104,7 @@ export const platforms = [
 export const hero: HeroContent = {
   eyebrow: "Enterprise Operating Intelligence for industrial and project-driven businesses.",
   headline:
-    "AI-Native Enterprise Intelligence for Revenue, Margin, Productivity, and Execution",
+    "Enterprise Operating Intelligence for industrial and project-driven businesses.",
   subheadline:
     "RightSense helps industrial and enterprise businesses move from fragmented systems, documents, spreadsheets, emails, and manual decisions to AI-powered operating intelligence.",
   support:
@@ -329,7 +329,7 @@ export const diagnostic: {
   deliverables: string[];
   cta: CtaLink;
 } = {
-  title: "PulseIQ 48-Hour Enterprise Intelligence Diagnostic",
+  title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
   subtitle:
     "A focused, executive-grade engagement that delivers a board-ready view of enterprise truth in 48 hours — not 48 weeks.",
   steps: [
@@ -375,7 +375,7 @@ export const diagnostic: {
     "30/60/90 day execution plan with named owners and KPIs",
     "Board-ready briefing document for the next leadership review",
   ],
-  cta: { label: "Book a Diagnostic", href: "/contact" },
+  cta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
 };
 
 export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
@@ -417,7 +417,7 @@ export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
 export const ctaSection = {
   title: "Move from fragmented data to a connected, board-ready view of your enterprise.",
   subtitle:
-    "Start with a 48-Hour Enterprise Operating Intelligence Diagnostic. No long transformation program. No generic AI demo. Just a focused diagnostic with decisions leadership can act on.",
+    "Start with a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic. No long transformation program. No generic AI demo. Just a focused diagnostic with decisions leadership can act on.",
   primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
   secondaryCta: { label: "Talk to a Co-Founder", href: "/about" },
 } as const;
@@ -521,7 +521,7 @@ export const moatPage: MoatPageContent = {
     title: "See the moat in action.",
     subtitle:
       "Book a 48-Hour Diagnostic and watch the truth map come together in your business.",
-    primaryCta: { label: "Book a Diagnostic", href: "/assessment" },
+    primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
     secondaryCta: { label: "Explore Platforms", href: "/platforms" },
   },
 };
@@ -567,7 +567,7 @@ export const platformsPage = {
     subtitle:
       "Most clients start with the 48-Hour Diagnostic on PulseIQ and expand into WinsProposal and TalentPulse as the truth map matures.",
     primaryCta: { label: "Explore PulseIQ", href: "/pulseiq" },
-    secondaryCta: { label: "Book an Assessment", href: "/assessment" },
+    secondaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
   },
 } as const;
 
@@ -742,7 +742,7 @@ export const pulseiqPage = {
           "A 2-week workbench engagement that maps the operating model and produces a 90-day execution plan.",
       },
       {
-        title: "48-Hour Enterprise Intelligence Diagnostic",
+        title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
         description:
           "A focused 48-hour engagement that delivers a board-ready view of enterprise truth.",
       },
@@ -767,7 +767,7 @@ export const pulseiqPage = {
     title: "See PulseIQ in your business, in 48 hours.",
     subtitle:
       "Bring your financials, your strategy deck, and your Excel trackers. Leave with a board-ready view of enterprise truth.",
-    primaryCta: { label: "Book a Diagnostic", href: "/assessment" },
+    primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
     secondaryCta: { label: "Visit PulseIQ.co.in", href: "https://www.pulseiq.co.in/" },
   },
 } as const;
@@ -878,7 +878,7 @@ export const talentpulsePage = {
     eyebrow: "TalentPulse",
     title: "TalentPulse: AI-Native Talent Intelligence Platform",
     subtitle:
-      "Connect talent sourcing, candidate intelligence, recruiter workflows, workforce signals, and productivity insights to improve hiring velocity, utilization, and capability planning.",
+      "Hire faster. Hire better. Talent intelligence for project-driven, delivery-heavy, and GCC-style teams — connecting delivery readiness, staffing visibility, recruiter productivity, candidate intelligence, project capacity, and skills visibility.",
   },
   capabilities: {
     title: "Capabilities",
@@ -920,6 +920,17 @@ export const talentpulsePage = {
       },
     ] satisfies Capability[],
   },
+  useCases: {
+    title: "Use cases",
+    items: [
+      "GCC hiring visibility",
+      "Project staffing readiness",
+      "Bench and capacity planning",
+      "Recruiter productivity",
+      "Candidate pipeline intelligence",
+      "Skills and delivery readiness",
+    ],
+  },
   outcomes: {
     title: "Outcomes",
     items: [
@@ -930,6 +941,11 @@ export const talentpulsePage = {
       "Talent-to-business outcome alignment — hiring decisions linked to revenue, margin, and execution outcomes.",
     ],
   },
+  ecosystem: {
+    title: "Part of the RightSense Enterprise Operating Intelligence stack.",
+    body: "TalentPulse sits alongside PulseIQ and WinsProposal in the RightSense platform family, surfacing talent-specific intelligence — capacity, skills, attrition, productivity — that feeds into the broader Enterprise Truth Map and Executive Cockpit.",
+  },
+  note: "TalentPulse is most relevant when talent decisions affect revenue delivery, project execution, or customer commitments.",
   fitWithPulseiq: {
     title: "How TalentPulse fits with PulseIQ",
     body:
@@ -939,15 +955,15 @@ export const talentpulsePage = {
     title: "See TalentPulse in your hiring funnel.",
     subtitle:
       "Visit the TalentPulse product site or talk to our team about a talent intelligence pilot.",
-    primaryCta: { label: "Visit TalentPulse.me", href: "https://www.talentpulse.me/" },
+    primaryCta: { label: "Discuss Talent Intelligence", href: "https://www.rightsense.in/48-hour-diagnostic" },
     secondaryCta: { label: "Talk to our team", href: "/contact" },
   },
 } as const;
 
 export const assessmentPage = {
   hero: {
-    eyebrow: "PulseIQ flagship engagement",
-    title: "PulseIQ 48-Hour Enterprise Intelligence Diagnostic",
+    eyebrow: "RightSense flagship engagement",
+    title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
     subtitle:
       "Our first sellable offer: a 48-hour, executive-grade engagement that delivers a board-ready view of enterprise truth.",
   },
@@ -1057,10 +1073,10 @@ export const assessmentPage = {
     ] satisfies PlanPhase[],
   },
   cta: {
-    title: "Book a 48-Hour Enterprise Intelligence Diagnostic",
+    title: "Book a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic",
     subtitle:
       "Bring the sources you already have. Leave with a board-ready view of enterprise truth, business gaps, forecast scenarios, and a 90-day action plan.",
-    primaryCta: { label: "Book a 48-Hour Diagnostic", href: "/contact" },
+    primaryCta: { label: "Book a 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
   },
   whenLeadershipNeedsThis: {
     title: "Signs Leadership Needs This Diagnostic Now",
@@ -1104,8 +1120,8 @@ export const assessmentPage = {
   } satisfies SampleOutput,
   midCta: {
     title: "Want to know what your data can reveal in 48 hours?",
-    primaryCta: { label: "Book Diagnostic Call", href: "/contact" },
-    secondaryCta: { label: "Ask What Data Is Needed", href: "/contact" },
+    primaryCta: { label: "Book Diagnostic Call", href: "/48-hour-diagnostic" },
+    secondaryCta: { label: "Ask What Data Is Needed", href: "/48-hour-diagnostic" },
   } as const,
   minimumRequired: {
     title: "Minimum required to start",
@@ -1135,10 +1151,10 @@ export const assessmentPage = {
 
 export const diagnosticPage: DiagnosticPageContent = {
   hero: {
-    eyebrow: "PulseIQ",
-    title: "48-Hour Enterprise Operating Intelligence Diagnostic",
+    eyebrow: "RightSense",
+    title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
     subtitle:
-      "A focused entry engagement that connects your fragmented systems, documents, and decisions into a board-ready view of enterprise truth — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
+      "A focused entry engagement, powered by PulseIQ, that connects your fragmented systems, documents, and decisions into a board-ready view of enterprise truth — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
   },
   whoItsFor: {
     title: "Who this diagnostic is for",
@@ -1229,7 +1245,7 @@ export const diagnosticPage: DiagnosticPageContent = {
         title: "Compliance & Standards Readiness",
         summary: "ISO readiness, technical standards compliance, and audit preparedness.",
         items: [
-          "Gap assessment against ISO 9001, 14001, 45001, 27001, 42001, 50001 standards",
+          "Gap assessment against ISO 9001, ISO 14001, ISO 45001, ISO/IEC 27001, ISO/IEC 42001, ISO 50001 standards",
           "Technical standards compliance review (API, ASME, ANSI, IEC, ISA, customer-specific)",
           "Statutory documentation and audit evidence readiness",
           "Policy, SOP, and procedure documentation completeness scoring",
@@ -1239,9 +1255,10 @@ export const diagnosticPage: DiagnosticPageContent = {
       {
         num: "05",
         title: "Vendor/Supplier/Ecosystem Readiness",
-        summary: "Supplier governance, prequalification status, and ecosystem risk.",
+        summary: "Supplier governance, subcontractor oversight, vendor registration, and customer prequalification readiness.",
         items: [
-          "Vendor registration and prequalification status assessment",
+          "Supplier qualification, subcontractor governance, and vendor registration status assessment",
+          "Customer prequalification readiness and compliance documentation completeness",
           "Supplier contract compliance and performance scorecard",
           "Multi-tier supply chain visibility and risk mapping",
           "Procurement-to-payment cycle efficiency and control gaps",
@@ -1353,8 +1370,8 @@ export const diagnosticPage: DiagnosticPageContent = {
           "ISO 9001 — Quality management systems",
           "ISO 14001 — Environmental management systems",
           "ISO 45001 — Occupational health and safety",
-          "ISO 27001 — Information security management",
-          "ISO 42001 — Artificial intelligence management systems",
+          "ISO/IEC 27001 — Information security management",
+          "ISO/IEC 42001 — Artificial intelligence management systems",
           "ISO 50001 — Energy management systems",
         ],
       },
@@ -1395,10 +1412,10 @@ export const diagnosticPage: DiagnosticPageContent = {
     ],
   },
   cta: {
-    title: "Book a 48-Hour Enterprise Operating Intelligence Diagnostic",
+    title: "Book a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic",
     subtitle:
       "Bring your business question, your financials, your compliance documentation, and your strategy deck. We will show you what connected enterprise truth looks like — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
-    primaryCta: { label: "Book 48-Hour Diagnostic", href: "/contact" },
+    primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
     secondaryCta: { label: "Talk to a Co-Founder", href: "/about" },
   },
   disclaimer:
@@ -1418,8 +1435,8 @@ export const industriesPageCta: PageCta = {
   title: "See RightSense in your industry.",
   subtitle:
     "Bring the operating model, the data, and the question you are trying to answer. We will show you what the truth map looks like in your business.",
-  primaryCta: { label: "Book a Diagnostic", href: "/contact" },
-  secondaryCta: { label: "See the Assessment", href: "/assessment" },
+  primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
+  secondaryCta: { label: "See the Assessment", href: "/48-hour-diagnostic" },
 };
 
 export const industriesDetailed: IndustryDetail[] = [
@@ -1672,7 +1689,7 @@ export const aboutPage = {
 export const contactPage = {
   hero: {
     eyebrow: "Contact",
-    title: "Start with a 48-Hour Enterprise Intelligence Diagnostic",
+    title: "Start with a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic",
     subtitle:
       "Tell us about your business and the question you are trying to answer. We will come back within one business day.",
   },
