@@ -419,7 +419,7 @@ export const ctaSection = {
   subtitle:
     "Start with a 48-Hour Enterprise Operating Intelligence Diagnostic. No long transformation program. No generic AI demo. Just a focused diagnostic with decisions leadership can act on.",
   primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
-  secondaryCta: { label: "Talk to a Founder", href: "/about" },
+  secondaryCta: { label: "Talk to a Co-Founder", href: "/about" },
 } as const;
 
 /* ============================================
@@ -1138,7 +1138,7 @@ export const diagnosticPage: DiagnosticPageContent = {
     eyebrow: "PulseIQ",
     title: "48-Hour Enterprise Operating Intelligence Diagnostic",
     subtitle:
-      "A paid entry engagement that connects your fragmented systems, documents, and decisions into a board-ready view of enterprise truth — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
+      "A focused entry engagement that connects your fragmented systems, documents, and decisions into a board-ready view of enterprise truth — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
   },
   whoItsFor: {
     title: "Who this diagnostic is for",
@@ -1399,7 +1399,7 @@ export const diagnosticPage: DiagnosticPageContent = {
     subtitle:
       "Bring your business question, your financials, your compliance documentation, and your strategy deck. We will show you what connected enterprise truth looks like — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
     primaryCta: { label: "Book 48-Hour Diagnostic", href: "/contact" },
-    secondaryCta: { label: "Talk to a Founder", href: "/about" },
+    secondaryCta: { label: "Talk to a Co-Founder", href: "/about" },
   },
   disclaimer:
     "RightSense does not provide ISO certification, legal certification, statutory audit, regulatory approval, or formal customer approval. The diagnostic identifies readiness gaps, workflow risks, documentation gaps, and improvement opportunities. Formal certification or legal/statutory compliance must be confirmed by accredited certification bodies, auditors, or qualified legal/statutory professionals.",
