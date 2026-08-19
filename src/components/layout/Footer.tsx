@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig, platforms, primaryNav } from "@/lib/content";
+import { ecosystemAdvaitha, siteConfig, platforms, primaryNav } from "@/lib/content";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -22,10 +22,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-500">
-            Platforms
-          </h4>
+          <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-500">Ecosystem</h4>
           <ul className="mt-3 space-y-2">
+            <li><a href={ecosystemAdvaitha.href} target="_blank" rel="noreferrer" className="text-sm text-ink-700 hover:text-ink-900">{ecosystemAdvaitha.name} — {ecosystemAdvaitha.summary}</a></li>
             {platforms.map((p) => (
               <li key={p.href}>
                 <Link

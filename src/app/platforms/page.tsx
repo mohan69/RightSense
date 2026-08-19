@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { CTASection } from "@/components/sections/CTASection";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectionHeader } from "@/components/sections/SectionHeader";
-import { platforms, platformsPage } from "@/lib/content";
+import { ecosystemAdvaitha, platforms, platformsPage } from "@/lib/content";
 import { platformIcons } from "@/lib/icons";
 import { pageMetadata } from "@/lib/seo";
 
@@ -34,6 +34,17 @@ export default function PlatformsPage() {
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <SectionHeader title={platformsPage.portfolioLogicTitle} />
+          <a
+            href={ecosystemAdvaitha.href}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-10 block rounded-2xl border border-brand-200 bg-brand-50 p-7 shadow-soft transition-shadow hover:shadow-elev"
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">Advisory & architecture</p>
+            <h2 className="mt-3 text-2xl font-semibold text-ink-900">{ecosystemAdvaitha.name}</h2>
+            <p className="mt-1 text-sm font-medium text-brand-700">{ecosystemAdvaitha.summary}</p>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-700">{ecosystemAdvaitha.description}</p>
+          </a>
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {platformsPage.portfolioLogic.map((p) => {
               const platformData = platforms.find(

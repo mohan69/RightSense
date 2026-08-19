@@ -101,6 +101,19 @@ export const platforms = [
   },
 ] as const;
 
+export const ecosystemAdvaitha = {
+  name: "Advaitha",
+  summary: "Enterprise AI Architecture & Advisory",
+  href: "https://advaitha.tech",
+  description:
+    "Defines the strategy, enterprise architecture, governance, decision rights and execution roadmap required to move from fragmented AI pilots to governed, measurable enterprise AI.",
+  outcomes: [
+    "Prioritized AI opportunity map",
+    "Target architecture and governance boundaries",
+    "30/60/90-day execution path",
+  ],
+} as const;
+
 export const hero: HeroContent = {
   eyebrow: "Enterprise Operating Intelligence for industrial and project-driven businesses.",
   headline:
@@ -529,12 +542,12 @@ export const moatPage: MoatPageContent = {
 export const platformsPage = {
   hero: {
     eyebrow: "The portfolio",
-    title: "Three Connected Platforms. One Enterprise Intelligence Vision.",
+    title: "Architecture above. Purpose-built platforms where acceleration matters.",
     subtitle:
-      "PulseIQ, WinsProposal, and TalentPulse are three platforms with distinct jobs — designed to be deployed alone or together as the connected truth layer an enterprise needs.",
+      "Advaitha defines strategy, architecture and governance. RightSense provides transformation and delivery capability, while PulseIQ, WinsProposal, and TalentPulse accelerate specific operating outcomes where they fit.",
   },
   portfolioIntro:
-    "Each platform solves a specific operating problem. Together they form a single feedback loop: revenue signals feed operating decisions, operating decisions expose talent and capacity gaps, and talent signals feed revenue planning.",
+    "Customers are not forced into a product-first transformation. Start with the architecture and operating problem, then use one or more purpose-built platforms where they create a clear fit.",
   portfolioLogicTitle: "What each platform does",
   portfolioLogic: [
     {
