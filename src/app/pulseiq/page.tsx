@@ -7,9 +7,13 @@ import { pulseiqPage } from "@/lib/content";
 import { pulseiqIcons } from "@/lib/icons";
 import { pageMetadata } from "@/lib/seo";
 
+const pulseiqTitle = "PulseIQ — Enterprise Operating Intelligence Platform";
+const pulseiqSubtitle =
+  "Know what is putting revenue, margin and customer commitments at risk, what is causing it, what can still be recovered and whether the resulting action created verified business value.";
+
 export const metadata: Metadata = pageMetadata({
-  title: pulseiqPage.hero.title,
-  description: pulseiqPage.hero.subtitle,
+  title: pulseiqTitle,
+  description: pulseiqSubtitle,
   path: "/pulseiq",
 });
 
@@ -17,9 +21,9 @@ export default function PulseIQPage() {
   return (
     <>
       <PageHero
-        eyebrow={pulseiqPage.hero.eyebrow}
-        title={pulseiqPage.hero.title}
-        subtitle={pulseiqPage.hero.subtitle}
+        eyebrow="Enterprise Operating Intelligence Platform"
+        title="From operational evidence to accountable recovery and verified business value."
+        subtitle={pulseiqSubtitle}
       />
 
       <section className="bg-white">
@@ -31,8 +35,7 @@ export default function PulseIQPage() {
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {pulseiqPage.truthMap.layers.map((layer) => {
-              const Icon =
-                pulseiqIcons[layer.icon as keyof typeof pulseiqIcons];
+              const Icon = pulseiqIcons[layer.icon as keyof typeof pulseiqIcons];
               return (
                 <div
                   key={layer.id}
@@ -41,12 +44,8 @@ export default function PulseIQPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-line shadow-soft">
                     <Icon className="h-5 w-5 text-brand-600" />
                   </div>
-                  <h3 className="mt-4 text-base font-semibold text-ink-900">
-                    {layer.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">
-                    {layer.description}
-                  </p>
+                  <h3 className="mt-4 text-base font-semibold text-ink-900">{layer.title}</h3>
+                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">{layer.description}</p>
                 </div>
               );
             })}
@@ -81,16 +80,9 @@ export default function PulseIQPage() {
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-3">
             {pulseiqPage.forecasting.horizons.map((h) => (
-              <div
-                key={h.label}
-                className="rounded-2xl border border-line bg-canvas p-7"
-              >
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">
-                  {h.label}
-                </p>
-                <p className="mt-3 text-base text-ink-700 leading-relaxed">
-                  {h.description}
-                </p>
+              <div key={h.label} className="rounded-2xl border border-line bg-canvas p-7">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">{h.label}</p>
+                <p className="mt-3 text-base text-ink-700 leading-relaxed">{h.description}</p>
               </div>
             ))}
           </div>
@@ -106,16 +98,9 @@ export default function PulseIQPage() {
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {pulseiqPage.whatIf.scenarios.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-xl border border-line bg-white p-5 hover:border-brand-200 transition-colors"
-              >
-                <p className="text-sm font-semibold text-ink-900">
-                  {s.label}
-                </p>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">
-                  {s.description}
-                </p>
+              <div key={s.label} className="rounded-xl border border-line bg-white p-5 hover:border-brand-200 transition-colors">
+                <p className="text-sm font-semibold text-ink-900">{s.label}</p>
+                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{s.description}</p>
               </div>
             ))}
           </div>
@@ -131,21 +116,12 @@ export default function PulseIQPage() {
           />
           <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {pulseiqPage.recommendationEngine.fields.map((f, i) => (
-              <li
-                key={f.label}
-                className="rounded-xl border border-line bg-canvas p-5"
-              >
+              <li key={f.label} className="rounded-xl border border-line bg-canvas p-5">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-xs font-bold tracking-[0.14em] text-brand-700">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h4 className="text-sm font-semibold text-ink-900">
-                    {f.label}
-                  </h4>
+                  <span className="text-xs font-bold tracking-[0.14em] text-brand-700">{String(i + 1).padStart(2, "0")}</span>
+                  <h4 className="text-sm font-semibold text-ink-900">{f.label}</h4>
                 </div>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">
-                  {f.description}
-                </p>
+                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{f.description}</p>
               </li>
             ))}
           </ol>
@@ -161,16 +137,9 @@ export default function PulseIQPage() {
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {pulseiqPage.deployment.options.map((o) => (
-              <div
-                key={o.title}
-                className="rounded-2xl border border-line bg-white p-7"
-              >
-                <h3 className="text-lg font-semibold text-ink-900">
-                  {o.title}
-                </h3>
-                <p className="mt-3 text-sm text-ink-600 leading-relaxed">
-                  {o.description}
-                </p>
+              <div key={o.title} className="rounded-2xl border border-line bg-white p-7">
+                <h3 className="text-lg font-semibold text-ink-900">{o.title}</h3>
+                <p className="mt-3 text-sm text-ink-600 leading-relaxed">{o.description}</p>
               </div>
             ))}
           </div>
@@ -186,10 +155,7 @@ export default function PulseIQPage() {
           />
           <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {pulseiqPage.connectorRoadmap.connectors.map((c) => (
-              <li
-                key={c}
-                className="rounded-xl border border-line bg-canvas px-4 py-3.5 text-sm font-medium text-ink-700"
-              >
+              <li key={c} className="rounded-xl border border-line bg-canvas px-4 py-3.5 text-sm font-medium text-ink-700">
                 {c}
               </li>
             ))}
@@ -198,10 +164,10 @@ export default function PulseIQPage() {
       </section>
 
       <CTASection
-        title={pulseiqPage.cta.title}
-        subtitle={pulseiqPage.cta.subtitle}
-        primaryCta={pulseiqPage.cta.primaryCta}
-        secondaryCta={pulseiqPage.cta.secondaryCta}
+        title="See PulseIQ against one outcome that matters."
+        subtitle="Start with a representative order, revenue, margin or execution problem and test the governed path from risk to recovery and verified value."
+        primaryCta={{ label: "Explore PulseIQ", href: "https://pulseiq.co.in/" }}
+        secondaryCta={{ label: "Discuss an Outcome", href: "https://pulseiq.co.in/book-demo" }}
       />
     </>
   );

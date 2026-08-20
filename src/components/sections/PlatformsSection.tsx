@@ -4,6 +4,15 @@ import { platformIcons } from "@/lib/icons";
 import { ecosystemAdvaitha, platforms } from "@/lib/content";
 import { SectionHeader } from "./SectionHeader";
 
+const canonicalDescriptions: Record<string, string> = {
+  PulseIQ:
+    "Connects operational evidence across ERP, CRM, CPQ, engineering, planning and execution to show what is putting revenue, margin and customer commitments at risk, what is causing it, what can still be recovered and whether the resulting action created verified business value.",
+  WinsProposal:
+    "Turns proposals, RFP responses and pricing decisions into a learning loop that improves win rate, proposal velocity and margin protection.",
+  TalentPulse:
+    "Connects talent acquisition, workforce capacity, skills, readiness and productivity signals so leaders can see whether the organization has the people and capability to deliver its commitments.",
+};
+
 export function PlatformsSection() {
   return (
     <section className="bg-canvas">
@@ -11,7 +20,7 @@ export function PlatformsSection() {
         <SectionHeader
           eyebrow="RightSense ecosystem"
           title="Architecture above. Purpose-built platforms where acceleration matters."
-          subtitle="Advaitha defines strategy, architecture and governance. RightSense provides transformation and delivery capability. PulseIQ, WinsProposal and TalentPulse accelerate specific operating outcomes where there is a clear fit — without forcing a product-first transformation."
+          subtitle="Advaitha defines strategy, architecture and governance. RightSense provides transformation, integration and delivery capability. PulseIQ, WinsProposal and TalentPulse accelerate specific operating outcomes where there is a clear fit — without forcing a product-first transformation."
         />
 
         <a
@@ -33,8 +42,7 @@ export function PlatformsSection() {
 
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
           {platforms.map((p) => {
-            const Icon =
-              platformIcons[p.icon as keyof typeof platformIcons];
+            const Icon = platformIcons[p.icon as keyof typeof platformIcons];
             return (
               <div
                 key={p.href}
@@ -43,22 +51,15 @@ export function PlatformsSection() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-ink-900">
-                  {p.name}
-                </h3>
-                <p className="mt-1 text-sm font-medium text-brand-700">
-                  {p.summary}
-                </p>
+                <h3 className="mt-5 text-xl font-semibold text-ink-900">{p.name}</h3>
+                <p className="mt-1 text-sm font-medium text-brand-700">{p.summary}</p>
                 <p className="mt-4 text-sm text-ink-600 leading-relaxed flex-1">
-                  {p.description}
+                  {canonicalDescriptions[p.name] ?? p.description}
                 </p>
                 {p.outcomes && p.outcomes.length > 0 ? (
                   <ul className="mt-5 space-y-2 border-t border-line pt-5">
                     {p.outcomes.map((o) => (
-                      <li
-                        key={o}
-                        className="flex items-start gap-2 text-sm text-ink-700"
-                      >
+                      <li key={o} className="flex items-start gap-2 text-sm text-ink-700">
                         <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-500 shrink-0" />
                         <span>{o}</span>
                       </li>
