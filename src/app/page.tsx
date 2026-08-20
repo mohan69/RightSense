@@ -8,7 +8,6 @@ import { OutcomesSection } from "@/components/sections/OutcomesSection";
 import { PlatformsSection } from "@/components/sections/PlatformsSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { WhyRightSenseSection } from "@/components/sections/WhyRightSenseSection";
-import { ctaSection } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -23,10 +22,10 @@ export default function Home() {
       <HowItWorksSection />
       <WhyRightSenseSection />
       <CTASection
-        title={ctaSection.title}
-        subtitle={ctaSection.subtitle}
-        primaryCta={ctaSection.primaryCta}
-        secondaryCta={ctaSection.secondaryCta}
+        title="Start with the smallest engagement capable of proving business value."
+        subtitle="Whether the priority is enterprise AI architecture, operating execution, proposals or workforce readiness, RightSense routes the problem to the right advisory or platform motion instead of forcing every customer through the same starting point."
+        primaryCta={{ label: "Discuss Your Priority", href: "/contact" }}
+        secondaryCta={{ label: "Explore the Ecosystem", href: "/platforms" }}
       />
     </>
   );
