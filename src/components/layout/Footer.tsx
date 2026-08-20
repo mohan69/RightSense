@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { ecosystemAdvaitha, siteConfig, platforms, primaryNav } from "@/lib/content";
 
+const parentDescription =
+  "AI-native enterprise transformation, integration and outcome delivery for industrial and project-driven businesses.";
+
 export function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -17,7 +20,7 @@ export function Footer() {
             <span>{siteConfig.name}</span>
           </Link>
           <p className="mt-3 max-w-md text-sm text-ink-600">
-            {siteConfig.description}
+            {parentDescription}
           </p>
         </div>
 
@@ -61,7 +64,7 @@ export function Footer() {
           <p>
             © {year} {siteConfig.name}. All rights reserved.
           </p>
-          <p>{siteConfig.tagline}</p>
+          <p>{parentDescription}</p>
         </div>
       </div>
     </footer>
