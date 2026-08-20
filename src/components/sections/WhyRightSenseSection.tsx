@@ -16,6 +16,12 @@ export function WhyRightSenseSection() {
           {whyRightSense.points.map((point) => {
             const Icon =
               whyRightSenseIcons[point.icon as keyof typeof whyRightSenseIcons];
+            const isAssessment = point.id === "assessment";
+            const title = isAssessment ? "Proof-first, right-sized entry" : point.title;
+            const description = isAssessment
+              ? "Start with the smallest diagnostic, discovery or platform proof capable of validating measurable value for the priority at hand."
+              : point.description;
+
             return (
               <div
                 key={point.id}
@@ -25,10 +31,10 @@ export function WhyRightSenseSection() {
                   <Icon className="h-5 w-5 text-brand-600" />
                 </div>
                 <h3 className="mt-4 text-base font-semibold text-ink-900">
-                  {point.title}
+                  {title}
                 </h3>
                 <p className="mt-2 text-sm text-ink-600 leading-relaxed">
-                  {point.description}
+                  {description}
                 </p>
               </div>
             );
