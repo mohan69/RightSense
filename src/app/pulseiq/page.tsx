@@ -1,173 +1,136 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, CircleDollarSign, Radar, ShieldCheck, Target } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
-import { MetricCard } from "@/components/sections/MetricCard";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectionHeader } from "@/components/sections/SectionHeader";
-import { pulseiqPage } from "@/lib/content";
-import { pulseiqIcons } from "@/lib/icons";
 import { pageMetadata } from "@/lib/seo";
 
-const pulseiqTitle = "PulseIQ — Enterprise Operating Intelligence Platform";
-const pulseiqSubtitle =
-  "Know what is putting revenue, margin and customer commitments at risk, what is causing it, what can still be recovered and whether the resulting action created verified business value.";
+const title = "PulseIQ — Industrial Decision & Value Intelligence";
+const description =
+  "PulseIQ connects enterprise evidence and approved external signals to customer commitments, quantifies economic exposure, guides governed action and keeps modeled opportunity separate from verified value.";
 
 export const metadata: Metadata = pageMetadata({
-  title: pulseiqTitle,
-  description: pulseiqSubtitle,
+  title,
+  description,
   path: "/pulseiq",
 });
+
+const questions = [
+  {
+    icon: Radar,
+    title: "What is economically at risk?",
+    text: "Trace operational and external signals to the exact customer commitments, revenue, margin, delivery, LD and cash exposure they can affect.",
+  },
+  {
+    icon: Target,
+    title: "What can leadership still change?",
+    text: "Identify the decision window, accountable owner and governed actions while people retain authority over consequential decisions.",
+  },
+  {
+    icon: CircleDollarSign,
+    title: "What value actually happened?",
+    text: "Separate modeled exposure, potential protectable value, observed outcomes and independently verified value in a governed Value Ledger.",
+  },
+];
+
+const proofSteps = [
+  "Bring one economically important management question.",
+  "Agree the smallest read-only evidence scope needed to test it.",
+  "RightSense owns source discovery, mapping, entity resolution and correlation.",
+  "PulseIQ builds the evidence-to-commitment path and quantifies modeled economic exposure.",
+  "Leadership acts only through governed human decision authority.",
+  "Observed outcomes and verified value are measured separately from modeled opportunity.",
+];
 
 export default function PulseIQPage() {
   return (
     <>
       <PageHero
-        eyebrow="Enterprise Operating Intelligence Platform"
-        title="From operational evidence to accountable recovery and verified business value."
-        subtitle={pulseiqSubtitle}
+        eyebrow="Industrial Decision & Value Intelligence"
+        title="Protect the economics of every customer commitment."
+        subtitle="PulseIQ shows what is at risk, why, what can still change and what value was actually protected or recovered — using connected enterprise evidence rather than another isolated dashboard."
       />
 
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <SectionHeader
-            eyebrow="01 · Truth layer"
-            title={pulseiqPage.truthMap.title}
-            subtitle={pulseiqPage.truthMap.subtitle}
+            eyebrow="The management problem"
+            title="Your systems record events. Leadership needs to understand economic consequence."
+            subtitle="A late engineering release, supplier distress signal or logistics disruption matters only when you can connect it to the customer commitments and financial outcomes that depend on it."
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {pulseiqPage.truthMap.layers.map((layer) => {
-              const Icon = pulseiqIcons[layer.icon as keyof typeof pulseiqIcons];
-              return (
-                <div
-                  key={layer.id}
-                  className="rounded-xl border border-line bg-canvas p-6 hover:border-brand-200 transition-colors"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-line shadow-soft">
-                    <Icon className="h-5 w-5 text-brand-600" />
-                  </div>
-                  <h3 className="mt-4 text-base font-semibold text-ink-900">{layer.title}</h3>
-                  <p className="mt-2 text-sm text-ink-600 leading-relaxed">{layer.description}</p>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {questions.map(({ icon: Icon, title: cardTitle, text }) => (
+              <article key={cardTitle} className="rounded-2xl border border-line bg-canvas p-7">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600 text-white">
+                  <Icon className="h-5 w-5" />
                 </div>
-              );
-            })}
+                <h3 className="mt-5 text-xl font-semibold text-ink-900">{cardTitle}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-600">{text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="02 · Leadership view"
-            title={pulseiqPage.cockpit.title}
-            subtitle={pulseiqPage.cockpit.subtitle}
-          />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {pulseiqPage.cockpit.metrics.map((m) => (
-              <MetricCard key={m.label} metric={m} />
-            ))}
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-700">Founding Customer Value Proof</p>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-900">
+                Prove value before asking the customer to trust the platform.
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-ink-600">
+                PulseIQ is entering the market with a proof-first commercial model. Early customers should experience the product on their own management problem before making a significant platform commitment.
+              </p>
+              <div className="mt-6 rounded-2xl border border-brand-200 bg-brand-50 p-5 text-sm font-semibold leading-7 text-ink-800">
+                If PulseIQ cannot surface a credible economic signal from the agreed evidence, stop. If it can, agree how value will be verified and then decide whether continuous use is worth paying for.
+              </div>
+              <div className="mt-7 flex items-center gap-2 text-sm font-semibold text-ink-700">
+                <ShieldCheck className="h-5 w-5 text-emerald-600" /> Read-only first · tenant-isolated · no source-system writeback · human decision authority
+              </div>
+            </div>
+            <ol className="grid gap-4 sm:grid-cols-2">
+              {proofSteps.map((step, index) => (
+                <li key={step} className="rounded-2xl border border-line bg-white p-6">
+                  <span className="text-xs font-bold tracking-[0.14em] text-brand-700">0{index + 1}</span>
+                  <p className="mt-3 text-sm leading-7 text-ink-700">{step}</p>
+                </li>
+              ))}
+            </ol>
           </div>
-          <p className="mt-8 max-w-3xl text-sm text-ink-500 leading-relaxed">
-            {pulseiqPage.cockpit.topRisksNote}
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-20 text-center sm:py-24">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-700">What we can stand behind today</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-900">
+            One runtime. Different enterprise landscapes. Configuration, not customer-specific code.
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-ink-600">
+            PulseIQ has proven the same governed activation runtime across materially different reference landscapes using customer-specific mappings and policies while preserving a common evidence, commitment and economic-value model.
           </p>
-        </div>
-      </section>
-
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="03 · Forecast horizons"
-            title={pulseiqPage.forecasting.title}
-            subtitle={pulseiqPage.forecasting.subtitle}
-          />
-          <div className="mt-12 grid gap-5 sm:grid-cols-3">
-            {pulseiqPage.forecasting.horizons.map((h) => (
-              <div key={h.label} className="rounded-2xl border border-line bg-canvas p-7">
-                <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">{h.label}</p>
-                <p className="mt-3 text-base text-ink-700 leading-relaxed">{h.description}</p>
-              </div>
-            ))}
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-ink-500">
+            That does not mean every enterprise system is instant plug-and-play. It means supported source patterns can move from approved evidence to the first economically meaningful signal without creating a customer-specific product fork.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a href="https://pulseiq.co.in/demo/supplier-distress" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 font-semibold text-brand-700 hover:text-brand-800">
+              See the supplier-risk proof <ArrowRight className="h-4 w-4" />
+            </a>
+            <Link href="/contact" className="inline-flex items-center gap-2 font-semibold text-brand-700 hover:text-brand-800">
+              Discuss a founding-customer proof <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-canvas">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="04 · Scenario testing"
-            title={pulseiqPage.whatIf.title}
-            subtitle={pulseiqPage.whatIf.subtitle}
-          />
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {pulseiqPage.whatIf.scenarios.map((s) => (
-              <div key={s.label} className="rounded-xl border border-line bg-white p-5 hover:border-brand-200 transition-colors">
-                <p className="text-sm font-semibold text-ink-900">{s.label}</p>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{s.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="05 · AI recommendation engine"
-            title={pulseiqPage.recommendationEngine.title}
-            subtitle={pulseiqPage.recommendationEngine.subtitle}
-          />
-          <ol className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {pulseiqPage.recommendationEngine.fields.map((f, i) => (
-              <li key={f.label} className="rounded-xl border border-line bg-canvas p-5">
-                <div className="flex items-baseline gap-3">
-                  <span className="text-xs font-bold tracking-[0.14em] text-brand-700">{String(i + 1).padStart(2, "0")}</span>
-                  <h4 className="text-sm font-semibold text-ink-900">{f.label}</h4>
-                </div>
-                <p className="mt-2 text-sm text-ink-600 leading-relaxed">{f.description}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="bg-canvas">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="06 · First deployment"
-            title={pulseiqPage.deployment.title}
-            subtitle={pulseiqPage.deployment.subtitle}
-          />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2">
-            {pulseiqPage.deployment.options.map((o) => (
-              <div key={o.title} className="rounded-2xl border border-line bg-white p-7">
-                <h3 className="text-lg font-semibold text-ink-900">{o.title}</h3>
-                <p className="mt-3 text-sm text-ink-600 leading-relaxed">{o.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="07 · Connector roadmap"
-            title={pulseiqPage.connectorRoadmap.title}
-            subtitle={pulseiqPage.connectorRoadmap.subtitle}
-          />
-          <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {pulseiqPage.connectorRoadmap.connectors.map((c) => (
-              <li key={c} className="rounded-xl border border-line bg-canvas px-4 py-3.5 text-sm font-medium text-ink-700">
-                {c}
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
       <CTASection
-        title="See PulseIQ against one outcome that matters."
-        subtitle="Start with a representative order, revenue, margin or execution problem and test the governed path from risk to recovery and verified value."
-        primaryCta={{ label: "Explore PulseIQ", href: "https://pulseiq.co.in/" }}
-        secondaryCta={{ label: "Discuss an Outcome", href: "https://pulseiq.co.in/book-demo" }}
+        title="Bring one customer-commitment problem. Let PulseIQ prove whether meaningful value is there."
+        subtitle="No large platform commitment is required to begin the conversation. Start with the management question, agree the evidence boundary, prove the economic signal and scale only after value is demonstrated."
+        primaryCta={{ label: "Start a Value Proof", href: "https://pulseiq.co.in/book-demo" }}
+        secondaryCta={{ label: "Explore PulseIQ", href: "https://pulseiq.co.in/" }}
       />
     </>
   );
