@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Compass } from "lucide-react";
+import { ArrowRight, Compass, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -15,31 +15,37 @@ export function Hero() {
       <div className="mx-auto max-w-5xl px-6 pt-24 pb-28 sm:pt-32 sm:pb-36 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white shadow-soft backdrop-blur-sm">
           <Compass className="h-3.5 w-3.5 text-brand-300" />
-          AI-native enterprise transformation for industrial and project-driven businesses
+          Enterprise AI and decision intelligence for industrial businesses
         </div>
 
         <h1 className="mt-7 text-4xl sm:text-5xl lg:text-[3.5rem] font-semibold tracking-tight text-white text-balance leading-[1.1]">
-          AI-Native Enterprise Transformation. Measurable Business Outcomes.
+          Prove measurable business value before you scale AI.
         </h1>
 
         <p className="mt-6 text-lg text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
-          RightSense helps industrial and project-driven enterprises improve revenue, margin, cash, productivity and execution by combining enterprise AI architecture, transformation expertise and purpose-built intelligence platforms.
+          RightSense helps industrial and project-driven enterprises turn fragmented systems, operational evidence and external signals into better decisions around revenue, margin, delivery, cash and productivity.
         </p>
 
         <p className="mt-4 text-base text-blue-100/70 max-w-3xl mx-auto leading-relaxed">
-          Advaitha defines enterprise AI strategy, architecture and governance. RightSense provides transformation, integration and delivery. PulseIQ, WinsProposal and TalentPulse accelerate specific operating outcomes where there is a clear fit.
+          Start with one economically important management problem. We identify the smallest governed evidence path needed to test it, demonstrate whether meaningful value is available, and only then discuss broader platform adoption.
         </p>
+
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-blue-100/80">
+          <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-300" /> Read-only first</span>
+          <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-300" /> Human decision authority</span>
+          <span className="inline-flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-emerald-300" /> Value verified before scale</span>
+        </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link href="/contact">
             <Button size="lg" className="px-7 shadow-lg">
-              Discuss Your Priority
+              Bring One Business Problem
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
-          <Link href="/platforms">
+          <Link href="/pulseiq">
             <Button variant="outlineDark" size="lg" className="px-7">
-              Explore the Ecosystem
+              See How We Prove Value
             </Button>
           </Link>
         </div>
