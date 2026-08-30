@@ -1,5 +1,4 @@
 import { CTASection } from "@/components/sections/CTASection";
-import { DiagnosticSection } from "@/components/sections/DiagnosticSection";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { IndustriesSection } from "@/components/sections/IndustriesSection";
@@ -7,6 +6,7 @@ import { MoatSection } from "@/components/sections/MoatSection";
 import { OutcomesSection } from "@/components/sections/OutcomesSection";
 import { PlatformsSection } from "@/components/sections/PlatformsSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
+import { ProofFirstSection } from "@/components/sections/ProofFirstSection";
 import { WhyRightSenseSection } from "@/components/sections/WhyRightSenseSection";
 
 export default function Home() {
@@ -15,17 +15,17 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <MoatSection />
+      <ProofFirstSection />
       <PlatformsSection />
-      <DiagnosticSection />
       <OutcomesSection />
       <IndustriesSection />
       <HowItWorksSection />
       <WhyRightSenseSection />
       <CTASection
-        title="Start with the smallest engagement capable of proving business value."
-        subtitle="Whether the priority is enterprise AI architecture, operating execution, proposals or workforce readiness, RightSense routes the problem to the right advisory or platform motion instead of forcing every customer through the same starting point."
-        primaryCta={{ label: "Discuss Your Priority", href: "/contact" }}
-        secondaryCta={{ label: "Explore the Ecosystem", href: "/platforms" }}
+        title="Bring one economically important problem. Let us earn the right to scale."
+        subtitle="Start with a contained, governed value proof. If RightSense cannot demonstrate a credible economic signal, do not buy a broader platform. If value is demonstrated, agree how to verify it and decide whether continuous use is justified."
+        primaryCta={{ label: "Discuss a Value Proof", href: "/contact" }}
+        secondaryCta={{ label: "Explore PulseIQ", href: "/pulseiq" }}
       />
     </>
   );
