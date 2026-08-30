@@ -8,6 +8,10 @@ import { primaryNav, siteConfig } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const marketNav = primaryNav.filter(
+  (item) => item.href !== "/48-hour-diagnostic" && item.href !== "/assessment"
+);
+
 export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
@@ -16,31 +20,21 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-line bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link
-          href="/"
-          className="flex items-center gap-2 font-semibold text-ink-900"
-        >
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-brand-600 text-white text-xs font-bold">
-            R
-          </span>
+        <Link href="/" className="flex items-center gap-2 font-semibold text-ink-900">
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-brand-600 text-white text-xs font-bold">R</span>
           <span>{siteConfig.shortName}</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          {primaryNav.map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+          {marketNav.map((item) => {
+            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
                   "px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                  active
-                    ? "text-ink-900"
-                    : "text-ink-600 hover:text-ink-900 hover:bg-canvas"
+                  active ? "text-ink-900" : "text-ink-600 hover:text-ink-900 hover:bg-canvas"
                 )}
               >
                 {item.label}
@@ -50,9 +44,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-2">
-          <Link href="/contact">
-            <Button size="sm">Discuss Priority</Button>
-          </Link>
+          <Link href="/contact"><Button size="sm">Discuss a Value Proof</Button></Link>
         </div>
 
         <button
@@ -69,7 +61,7 @@ export function Nav() {
       {open ? (
         <div className="lg:hidden border-t border-line bg-white">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4">
-            {primaryNav.map((item) => (
+            {marketNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -80,7 +72,7 @@ export function Nav() {
               </Link>
             ))}
             <Link href="/contact" onClick={closeMenu} className="mt-2">
-              <Button className="w-full">Discuss Priority</Button>
+              <Button className="w-full">Discuss a Value Proof</Button>
             </Link>
           </nav>
         </div>
