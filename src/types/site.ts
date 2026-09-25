@@ -106,6 +106,15 @@ export type MoatPageContent = {
   pillarsTitle: string;
   pillarsSubtitle: string;
   pillars: MoatPillar[];
+  enablersTitle: string;
+  enablersSubtitle: string;
+  enablers: MoatPillar[];
+  learningLoop: {
+    title: string;
+    subtitle: string;
+    steps: { label: string; description: string }[];
+  };
+  trustChain: { label: string; description: string }[];
   comparisonsTitle: string;
   comparisonsSubtitle: string;
   comparisons: MoatComparison[];
@@ -122,6 +131,12 @@ export type PortfolioRole = {
   role: string;
   description: string;
   href: string;
+};
+
+export type PulseIqScaffold = {
+  title: string;
+  subtitle: string;
+  items: { label: string; description: string }[];
 };
 
 export type TruthLayer = {

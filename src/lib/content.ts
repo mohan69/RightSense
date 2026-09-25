@@ -61,6 +61,15 @@ export const primaryNav: NavItem[] = [
 
 export const platforms = [
   {
+    name: "Advaitha",
+    href: "https://advaitha.tech",
+    summary: "AI Strategy & Governance",
+    icon: "Compass",
+    description:
+      "Defines the strategy, architecture, governance, decision rights, and execution roadmap required to move from fragmented AI pilots to governed enterprise intelligence.",
+    outcomes: ["AI strategy and architecture", "Governance and decision rights", "Execution roadmap"],
+  },
+  {
     name: "PulseIQ",
     href: "/pulseiq",
     summary: "Enterprise Operating Intelligence Platform",
@@ -442,92 +451,108 @@ export const ctaSection = {
 export const moatPage: MoatPageContent = {
   hero: {
     eyebrow: "The moat",
-    title: "RightSense Moat: Enterprise Truth-to-Outcome Intelligence",
+    title: "The compounding moat behind Enterprise Truth-to-Outcome Intelligence",
     subtitle:
-      "Why RightSense is structurally different from BI tools, ERP consultants, AI agencies, and strategy firms.",
+      "RightSense connects fragmented enterprise evidence, identifies what puts business outcomes at risk, recommends the actions that matter, and verifies the value created.",
   },
   oneLine: "RightSense turns messy enterprise reality into board-ready business actions.",
   coreTitle: "The core moat",
   coreBody:
-    "RightSense connects the seven sources of enterprise truth — financial, strategic, operational, process, collaboration, revenue, and talent — and converts them directly into measurable business outcomes.",
-  pillarsTitle: "The seven pillars of the moat",
+    "The durable advantage is not a dashboard, a model, or a single integration. It is the compounding system that turns industrial evidence into explainable decisions, governed workflows, and verified outcomes — then learns from what happened.",
+  pillarsTitle: "The five-part compounding moat",
   pillarsSubtitle:
-    "Each pillar is a layer of differentiation the alternatives do not — and cannot — replicate together.",
+    "Each layer becomes more useful as decisions are explained, actions are executed, outcomes are measured, and generalized patterns improve the next decision.",
   pillars: [
     {
       num: "01",
-      title: "Industrial enterprise domain expertise",
+      title: "Industrial Decision Graph",
       description:
-        "Years of operating experience inside industrial, EPC, and manufacturing businesses — not just dashboards built on top of them.",
+        "A governed map of customer, quote, order, engineering, BOM, material, supplier, production, quality, shipment, invoice, cash, and commitment relationships — with source, freshness, confidence, and tenant scope.",
     },
     {
       num: "02",
-      title: "ERP, PLM, proposal, and manufacturing process knowledge",
+      title: "Industrial Outcome Pattern Library",
       description:
-        "Deep understanding of how work actually flows across SAP, Oracle, custom ERPs, PLM, MES, and proposal systems.",
+        "Generalized, anonymized cause-and-consequence patterns that become stronger only when comparable, governed cases are confirmed — never by copying customer records across tenants.",
     },
     {
       num: "03",
-      title: "AI-native platform architecture",
+      title: "RightSense Value Ledger",
       description:
-        "Built ground-up on a modern data and AI stack — not a BI tool with AI features bolted on.",
+        "A traceable record from opportunity and baseline to approved action, observed outcome, attribution, and independently verified value. Exposure is not presented as realized value.",
     },
     {
       num: "04",
-      title: "Assessment-first adoption model",
+      title: "Embedded Decision Workflows",
       description:
-        "Every engagement starts with a 48-hour diagnostic that proves the truth map before any software is sold.",
+        "Explainable recommendations move into the operating cadence with owners, approvals, milestones, evidence capture, and human decision rights — where work already happens.",
     },
     {
       num: "05",
-      title: "Financial, operational, process, collaboration, revenue, and talent intelligence",
+      title: "Reinvention Velocity",
       description:
-        "Seven truth sources in one connected layer — not seven separate point tools that disagree.",
+        "The ability to turn new evidence, customer questions, and operating learnings into safer product and workflow improvements faster than the environment changes.",
     },
-    {
-      num: "06",
-      title: "Outcome orientation across revenue, margin, cash, productivity, execution speed, and risk reduction",
-      description:
-        "Every recommendation is anchored to a number the board cares about, with quantified impact ranges.",
-    },
-    {
-      num: "07",
-      title: "Founder-led enterprise transformation credibility",
-      description:
-        "Senior practitioners run every engagement — no junior teams, no offshore hand-offs.",
-    },
+  ],
+  enablersTitle: "What enables the moat",
+  enablersSubtitle:
+    "Domain expertise, ERP/PLM/CRM/CPQ fluency, AI-native architecture, assessment-first entry, Fabric/data architecture, founder-led delivery, and outcome-based commercial models are the operating system around the moat — not substitutes for it.",
+  enablers: [
+    { num: "A", title: "Industrial domain expertise", description: "Makes the graph and patterns meaningful in engineered, project-driven work." },
+    { num: "B", title: "ERP / PLM / CRM / CPQ fluency", description: "Makes cross-system evidence usable without forcing customers to replace core systems." },
+    { num: "C", title: "AI-native and Fabric/data architecture", description: "Makes governed ingestion, reasoning, lineage, and iteration practical at enterprise scale." },
+    { num: "D", title: "Assessment-first, founder-led delivery", description: "Creates a proof path with senior accountability and a right-sized starting point." },
+    { num: "E", title: "Outcome-based commercial model", description: "Keeps the product tied to measured business value rather than activity or dashboard volume." },
+  ],
+  learningLoop: {
+    title: "The RightSense Learning Loop",
+    subtitle: "Every governed decision can improve the next one without exposing one customer’s data to another.",
+    steps: [
+      { label: "Observe", description: "Connect approved evidence and establish a current baseline." },
+      { label: "Explain", description: "Trace source facts, assumptions, confidence, and impact." },
+      { label: "Decide", description: "Route a recommendation to the accountable human owner." },
+      { label: "Execute", description: "Embed the action in an approved workflow with milestones." },
+      { label: "Measure", description: "Record the outcome, attribution, and verification state." },
+      { label: "Learn", description: "Promote only generalized, anonymized patterns into the library." },
+    ],
+  },
+  trustChain: [
+    { label: "Explain", description: "Why this matters and what the model or rule inferred." },
+    { label: "Source", description: "Which approved evidence supports the recommendation." },
+    { label: "Action", description: "Who owns the move, what approval is needed, and what changes." },
+    { label: "Value", description: "What baseline, outcome, and verification prove value was created." },
   ],
   comparisonsTitle: "How RightSense compares",
   comparisonsSubtitle:
-    "Four categories the alternatives fit into. None of them do what RightSense does.",
+    "The distinction is not that alternatives have no useful capability. It is that RightSense compounds evidence, decisions, workflows, and verified value across the operating model.",
   comparisons: [
     {
       competitor: "BI tools",
       competitorApproach:
         "Show dashboards and charts over historical data, and leave interpretation to the user.",
       rightsenseApproach:
-        "Provide decisions, forecasts, and what-if actions leadership can act on this quarter.",
+        "Add explainable decisions, governed workflows, and a value trail that improves with use.",
     },
     {
       competitor: "ERP consultants",
       competitorApproach:
         "Focus on configuring systems, migrating data, and running multi-year implementation programs.",
       rightsenseApproach:
-        "Create the intelligence layer that sits above ERP, CRM, PLM, and HRMS — without replacing them.",
+        "Create a governed decision layer above ERP, CRM, PLM, CPQ, and HRMS — without replacing them.",
     },
     {
       competitor: "AI agencies",
       competitorApproach:
         "Build generic AI demos and pilots that rarely reach production or move a number on the P&L.",
       rightsenseApproach:
-        "Deliver industrial-domain business outcomes with an assessment-first model and quantified impact.",
+        "Turn domain evidence into reusable, anonymized patterns and quantified, human-approved action.",
     },
     {
       competitor: "Strategy consultants",
       competitorApproach:
         "Deliver reports and slide decks that age quickly and rarely make it into the operating cadence.",
       rightsenseApproach:
-        "Combine an assessment workbench with operating platforms that keep the work alive after the report is delivered.",
+        "Keep the learning loop alive inside operating workflows, with evidence and value verification after the report.",
     },
   ],
   cta: {
@@ -542,14 +567,21 @@ export const moatPage: MoatPageContent = {
 export const platformsPage = {
   hero: {
     eyebrow: "The portfolio",
-    title: "Architecture above. Purpose-built platforms where acceleration matters.",
+    title: "A portfolio architecture for RightSense Enterprise Intelligence.",
     subtitle:
-      "Advaitha defines strategy, architecture and governance. RightSense provides transformation and delivery capability, while PulseIQ, WinsProposal, and TalentPulse accelerate specific operating outcomes where they fit.",
+      "Advaitha sets the strategy and governance spine. WinsProposal, PulseIQ, and TalentPulse compound revenue, operating, and workforce intelligence into one enterprise decision system.",
   },
   portfolioIntro:
-    "Customers are not forced into a product-first transformation. Start with the architecture and operating problem, then use one or more purpose-built platforms where they create a clear fit.",
+    "Each product has a distinct job. Together they create a governed learning loop: strategy defines the guardrails, revenue signals feed operating decisions, operating decisions expose talent and capacity gaps, and talent signals feed revenue planning.",
   portfolioLogicTitle: "What each platform does",
   portfolioLogic: [
+    {
+      platform: "Advaitha",
+      role: "AI strategy & governance",
+      href: "https://advaitha.tech",
+      description:
+        "Defines the strategy, architecture, governance, decision rights, and roadmap for governed enterprise AI.",
+    },
     {
       platform: "PulseIQ",
       role: "Enterprise operating intelligence",
@@ -572,9 +604,9 @@ export const platformsPage = {
         "Surfaces workforce capacity, skill, attrition, and productivity signals leadership cannot see in HRMS alone.",
     },
   ] satisfies PortfolioRole[],
-  connectionTitle: "How the three connect",
+  connectionTitle: "How the portfolio connects",
   connectionBody:
-    "Revenue intelligence (WinsProposal) + operating intelligence (PulseIQ) + talent intelligence (TalentPulse) form a single enterprise truth layer. PulseIQ turns that layer into a live executive cockpit with forecasting and what-if scenarios. Revenue signals feed operating decisions. Operating decisions expose talent and capacity gaps. Talent and capacity signals feed revenue planning. The loop compounds.",
+    "Advaitha defines the guardrails and decision rights. Revenue intelligence (WinsProposal), operating intelligence (PulseIQ), and workforce intelligence (TalentPulse) form the connected enterprise truth layer. Revenue signals feed operating decisions, operating decisions expose talent and capacity gaps, and talent signals feed revenue planning. The loop compounds.",
   cta: {
     title: "Start with PulseIQ. Add the others when ready.",
     subtitle:

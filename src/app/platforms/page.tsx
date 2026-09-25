@@ -45,7 +45,7 @@ export default function PlatformsPage() {
             <p className="mt-1 text-sm font-medium text-brand-700">{ecosystemAdvaitha.summary}</p>
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-700">{ecosystemAdvaitha.description}</p>
           </a>
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {platformsPage.portfolioLogic.map((p) => {
               const platformData = platforms.find(
                 (pl) => pl.name === p.platform
@@ -94,7 +94,7 @@ export default function PlatformsPage() {
             title={platformsPage.connectionTitle}
             subtitle={platformsPage.connectionBody}
           />
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {platformsPage.portfolioLogic.map((p, i) => (
               <div
                 key={p.platform}
@@ -111,6 +111,10 @@ export default function PlatformsPage() {
                 </p>
               </div>
             ))}
+          </div>
+          <div className="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-6 text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand-700">RightSense Enterprise Intelligence</p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-ink-700">One governed layer for enterprise truth, explainable decisions, embedded workflows, and verified value — with each product contributing its own evidence and learning signals.</p>
           </div>
         </div>
       </section>

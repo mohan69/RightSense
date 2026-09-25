@@ -10,6 +10,13 @@ const title = "PulseIQ — Industrial Decision & Value Intelligence";
 const description =
   "PulseIQ connects enterprise evidence and approved external signals to customer commitments, quantifies economic exposure, guides governed action and keeps modeled opportunity separate from verified value.";
 
+const decisionTrustSteps = [
+  { label: "Explain", description: "Show the reasoning, confidence, and business consequence behind the recommendation." },
+  { label: "Source", description: "Trace the approved evidence, freshness, and source-system lineage used." },
+  { label: "Action", description: "Assign an owner, approval gate, milestone, and human decision record." },
+  { label: "Value", description: "Carry the baseline through observed outcome, attribution, and verification." },
+];
+
 export const metadata: Metadata = pageMetadata({
   title,
   description,
@@ -69,6 +76,28 @@ export default function PulseIQPage() {
                 <p className="mt-3 text-sm leading-relaxed text-ink-600">{text}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-canvas">
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+          <SectionHeader
+            eyebrow="08 · Decision trust"
+            title="Explain → Source → Action → Value"
+            subtitle="PulseIQ is designed so leadership can inspect why a recommendation exists, what supports it, what happens next, and whether value was actually created."
+          />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {decisionTrustSteps.map((step, index) => (
+              <div key={step.label} className="rounded-2xl border border-line bg-white p-6 shadow-soft">
+                <span className="text-xs font-bold uppercase tracking-[0.14em] text-accent-600">0{index + 1}</span>
+                <h3 className="mt-3 text-lg font-semibold text-ink-900">{step.label}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 rounded-2xl border border-brand-200 bg-brand-50 p-6 text-sm leading-relaxed text-ink-700">
+            <strong className="text-ink-900">v1 implementation boundary:</strong> Industrial Decision Graph, Outcome Pattern Library, and Value Ledger records remain tenant-scoped, provenance-backed, read-only, and human-approved. No customer data is promoted into generalized patterns without anonymization and comparable governed evidence.
           </div>
         </div>
       </section>
