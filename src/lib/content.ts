@@ -110,6 +110,19 @@ export const platforms = [
   },
 ] as const;
 
+export const ecosystemAdvaitha = {
+  name: "Advaitha",
+  summary: "Enterprise AI Architecture & Advisory",
+  href: "https://advaitha.tech",
+  description:
+    "Defines the strategy, enterprise architecture, governance, decision rights and execution roadmap required to move from fragmented AI pilots to governed, measurable enterprise AI.",
+  outcomes: [
+    "Prioritized AI opportunity map",
+    "Target architecture and governance boundaries",
+    "30/60/90-day execution path",
+  ],
+} as const;
+
 export const hero: HeroContent = {
   eyebrow: "Enterprise Operating Intelligence for industrial and project-driven businesses.",
   headline:
