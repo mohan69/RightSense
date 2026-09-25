@@ -34,7 +34,7 @@ export default function PlatformsPage() {
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <SectionHeader title={platformsPage.portfolioLogicTitle} />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {platformsPage.portfolioLogic.map((p) => {
               const platformData = platforms.find(
                 (pl) => pl.name === p.platform
@@ -83,7 +83,7 @@ export default function PlatformsPage() {
             title={platformsPage.connectionTitle}
             subtitle={platformsPage.connectionBody}
           />
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {platformsPage.portfolioLogic.map((p, i) => (
               <div
                 key={p.platform}
@@ -100,6 +100,10 @@ export default function PlatformsPage() {
                 </p>
               </div>
             ))}
+          </div>
+          <div className="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-6 text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand-700">RightSense Enterprise Intelligence</p>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-ink-700">One governed layer for enterprise truth, explainable decisions, embedded workflows, and verified value — with each product contributing its own evidence and learning signals.</p>
           </div>
         </div>
       </section>

@@ -53,6 +53,7 @@ export const platformIcons = {
   Brain,
   FileText,
   Users,
+  Compass,
 } as const;
 
 export const industryIcons = {
