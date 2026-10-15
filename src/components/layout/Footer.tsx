@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ecosystemAdvaitha, siteConfig, platforms, primaryNav } from "@/lib/content";
 
 const parentDescription =
-  "Enterprise AI, decision intelligence and transformation for industrial businesses — prove measurable value first, then scale what works.";
+  "Human + AI process redesign for industrial businesses. Improve execution, support adoption and verify business value.";
 
 const siteLinks = primaryNav.filter(
   (item) => item.href !== "/" && item.href !== "/48-hour-diagnostic" && item.href !== "/assessment"
@@ -24,8 +24,8 @@ export function Footer() {
         <div>
           <h4 className="text-xs font-semibold uppercase tracking-wider text-ink-500">Ecosystem</h4>
           <ul className="mt-3 space-y-2">
-            <li><a href={ecosystemAdvaitha.href} target="_blank" rel="noreferrer" className="text-sm text-ink-700 hover:text-ink-900">Advaitha — Enterprise AI Architecture & Advisory</a></li>
-            {platforms.map((p) => (
+            <li><a href={ecosystemAdvaitha.href} target="_blank" rel="noreferrer" className="text-sm text-ink-700 hover:text-ink-900">Advaitha — Human + AI Decision Architecture</a></li>
+            {platforms.filter((p) => p.name !== "Advaitha").map((p) => (
               <li key={p.href}><Link href={p.href} className="text-sm text-ink-700 hover:text-ink-900">{p.name}</Link></li>
             ))}
           </ul>

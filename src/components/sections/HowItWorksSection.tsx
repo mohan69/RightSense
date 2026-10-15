@@ -12,7 +12,7 @@ export function HowItWorksSection() {
           subtitle={howItWorks.subtitle}
         />
 
-        <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {howItWorks.steps.map((step) => {
             const Icon =
               howItWorksIcons[step.icon as keyof typeof howItWorksIcons];

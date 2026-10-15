@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "./content";
 
 const ecosystemDescription =
-  "AI-native enterprise transformation for industrial and project-driven businesses, combining enterprise AI architecture, integration, delivery and purpose-built intelligence platforms to improve revenue, margin, cash, productivity and execution.";
+  "Human + AI process redesign for industrial businesses. Diagnose, redesign, build, operate and verify workflows that improve revenue, margin, cash, productivity and execution.";
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),

@@ -77,6 +77,7 @@ export const outcomeIcons = {
 } as const;
 
 export const howItWorksIcons = {
+  CheckCircle2,
   Plug,
   Map,
   Lightbulb,
