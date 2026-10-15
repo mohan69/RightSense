@@ -35,8 +35,8 @@ export function PlatformsSection() {
       <div className="mx-auto max-w-6xl px-6 py-24 sm:py-28">
         <SectionHeader
           eyebrow="RightSense ecosystem"
-          title="Architecture above. Purpose-built platforms only where they shorten the path to proven value."
-          subtitle="Advaitha defines strategy, architecture and governance. RightSense provides transformation and delivery. PulseIQ, WinsProposal and TalentPulse are used when a purpose-built platform clearly accelerates an outcome worth proving — not because every customer must buy the same stack."
+          title="Clear roles. Accelerators where they help."
+          subtitle="Advaitha designs Human + AI decision architecture, strategy and governance. RightSense redesigns and implements the process, supports adoption and verifies outcomes. PulseIQ, WinsProposal and TalentPulse accelerate relevant parts of the work."
         />
 
         <a
@@ -49,9 +49,9 @@ export function PlatformsSection() {
             <div className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.14em] text-brand-700">Advisory & architecture</p>
               <h3 className="mt-3 text-2xl font-semibold text-ink-900">Advaitha</h3>
-              <p className="mt-1 text-sm font-medium text-brand-700">Enterprise AI Architecture & Advisory</p>
+              <p className="mt-1 text-sm font-medium text-brand-700">Human + AI Decision Architecture</p>
               <p className="mt-4 text-sm leading-relaxed text-ink-700">
-                Helps industrial enterprises define the economic question, evidence boundary, target architecture, governance and proof-to-scale path before making a large AI or platform commitment.
+                Defines who decides, what AI may recommend or execute, which evidence is required and how exceptions are governed. Engage Advaitha for the decision blueprint, and RightSense for implementation and adoption.
               </p>
             </div>
             <ArrowRight className="h-5 w-5 shrink-0 text-brand-700" />
@@ -59,7 +59,7 @@ export function PlatformsSection() {
         </a>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
-          {platforms.map((p) => {
+          {platforms.filter((p) => p.name !== "Advaitha").map((p) => {
             const Icon = platformIcons[p.icon as keyof typeof platformIcons];
             const copy = canonicalCopy[p.name];
             return (

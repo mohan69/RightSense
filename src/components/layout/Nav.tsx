@@ -8,9 +8,7 @@ import { primaryNav, siteConfig } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const marketNav = primaryNav.filter(
-  (item) => item.href !== "/48-hour-diagnostic" && item.href !== "/assessment"
-);
+const marketNav = primaryNav.filter((item) => ["/ai-process-redesign", "/manufacturing-use-cases", "/platforms", "/about"].includes(item.href));
 
 export function Nav() {
   const pathname = usePathname();
@@ -44,7 +42,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-2">
-          <Link href="/contact"><Button size="sm">Discuss a Value Proof</Button></Link>
+          <Link href="/contact"><Button size="sm">Redesign One Business Process</Button></Link>
         </div>
 
         <button
@@ -72,7 +70,7 @@ export function Nav() {
               </Link>
             ))}
             <Link href="/contact" onClick={closeMenu} className="mt-2">
-              <Button className="w-full">Discuss a Value Proof</Button>
+              <Button className="w-full">Redesign One Business Process</Button>
             </Link>
           </nav>
         </div>

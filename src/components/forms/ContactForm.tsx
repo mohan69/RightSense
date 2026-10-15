@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { contactPage, contactSubmitEmail } from "@/lib/content";
 import type { FormField } from "@/types/site";
 
-const SUBJECT = "RightSense Diagnostic Request";
+const SUBJECT = "RightSense — Redesign One Business Process";
 
 function FieldInput({ field }: { field: FormField }) {
   const baseClass =
@@ -14,6 +14,7 @@ function FieldInput({ field }: { field: FormField }) {
   if (field.type === "select") {
     return (
       <select
+        id={field.name}
         name={field.name}
         required={field.required}
         defaultValue=""
@@ -34,6 +35,7 @@ function FieldInput({ field }: { field: FormField }) {
   if (field.type === "textarea") {
     return (
       <textarea
+        id={field.name}
         name={field.name}
         required={field.required}
         placeholder={field.placeholder}
@@ -46,6 +48,7 @@ function FieldInput({ field }: { field: FormField }) {
   return (
     <input
       type={field.type}
+      id={field.name}
       name={field.name}
       required={field.required}
       placeholder={field.placeholder}
@@ -98,7 +101,7 @@ export function ContactForm() {
       ))}
 
       <Button type="submit" size="lg" className="w-full">
-        Request Diagnostic Call
+        Prepare Process Redesign Request
       </Button>
 
       {status === "opening" ? (

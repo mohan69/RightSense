@@ -38,15 +38,17 @@ import type {
 export const siteConfig = {
   name: "RightSense Technologies",
   shortName: "RightSense",
-  tagline: "Enterprise Operating Intelligence for industrial and project-driven businesses.",
+  tagline: "Human + AI process redesign for industrial and project-driven businesses.",
   description:
-    "Enterprise Operating Intelligence for industrial and project-driven businesses.",
+    "Human + AI process redesign for industrial and project-driven businesses.",
   url: "https://rightsense.in",
   contactEmail: "contact@rightsense.in",
 } as const;
 
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Process Redesign", href: "/ai-process-redesign" },
+  { label: "Use Cases", href: "/manufacturing-use-cases" },
   { label: "Diagnostic", href: "/48-hour-diagnostic" },
   { label: "Moat", href: "/moat" },
   { label: "Platforms", href: "/platforms" },
@@ -124,9 +126,9 @@ export const ecosystemAdvaitha = {
 } as const;
 
 export const hero: HeroContent = {
-  eyebrow: "Enterprise Operating Intelligence for industrial and project-driven businesses.",
+  eyebrow: "Human + AI process redesign for industrial and project-driven businesses.",
   headline:
-    "Enterprise Operating Intelligence for industrial and project-driven businesses.",
+    "Human + AI process redesign for industrial and project-driven businesses.",
   subheadline:
     "RightSense helps industrial and enterprise businesses move from fragmented systems, documents, spreadsheets, emails, and manual decisions to AI-powered operating intelligence.",
   support:
@@ -136,9 +138,9 @@ export const hero: HeroContent = {
 };
 
 export const problemSection: SectionContent = {
-  title: "Enterprise leaders do not lack data. They lack connected truth.",
+  title: "The handoffs are where work gets stuck.",
   subtitle:
-    "Decisions stall because the business is a hundred disconnected sources of partial truth — owned by no one, reconciled by no one, and out of date by the time the meeting starts.",
+    "An order can wait on a drawing, a supplier update or an approval while everyone works from a different tracker. Redesigning the process means changing who sees the evidence, who decides and how the next action happens.",
 };
 
 export const problemPoints: ProblemPoint[] = [
@@ -231,7 +233,7 @@ export const truthSources: TruthSource[] = [
 export const outcomesSection: SectionContent = {
   title: "Outcomes, not dashboards.",
   subtitle:
-    "Every RightSense engagement is anchored to a board-level outcome. The platform exists to move these seven numbers — not to add another dashboard to your stack.",
+    "Each process has a business owner, a baseline and an outcome to verify. We track adoption and cycle time alongside revenue, margin, cash and productivity.",
 };
 
 export const outcomes: Outcome[] = [
@@ -401,38 +403,14 @@ export const diagnostic: {
 };
 
 export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
-  title: "How RightSense works.",
-  subtitle:
-    "From fragmented data to a connected, board-ready view of your enterprise — in four stages.",
+  title: "Diagnose → Redesign → Build → Operate → Verify",
+  subtitle: "One process, a named owner and an agreed measure of value. People, process and technology move together.",
   steps: [
-    {
-      num: "01",
-      icon: "Plug",
-      title: "Connect",
-      description:
-        "Securely ingest data from ERP, CRM, HRMS, MES, finance, documents, emails, and meeting systems.",
-    },
-    {
-      num: "02",
-      icon: "Map",
-      title: "Map",
-      description:
-        "Build the enterprise truth model — systems, processes, decisions, and ownership in one place.",
-    },
-    {
-      num: "03",
-      icon: "Lightbulb",
-      title: "Recommend",
-      description:
-        "Rank the highest-impact moves with quantified business outcomes and clear ownership.",
-    },
-    {
-      num: "04",
-      icon: "Rocket",
-      title: "Execute",
-      description:
-        "Deliver board-ready playbooks with owners, milestones, and KPIs the leadership team can track.",
-    },
+    { num: "01", icon: "Plug", title: "Diagnose", description: "Trace the current work, quantify the constraint and agree the baseline, data scope and business owner." },
+    { num: "02", icon: "Map", title: "Redesign", description: "Define the Human + AI workflow, decision rights, exception paths and changes to roles and daily routines." },
+    { num: "03", icon: "Lightbulb", title: "Build", description: "Connect approved evidence, build the smallest useful workflow and test quality, controls and failure handling." },
+    { num: "04", icon: "Rocket", title: "Operate", description: "Coach users, run the workflow in the operating rhythm and track adoption, overrides and support needs." },
+    { num: "05", icon: "CheckCircle2", title: "Verify", description: "Compare outcomes with the agreed baseline. Finance validates attributable value and the team decides whether to scale." },
   ],
 };
 
@@ -1212,9 +1190,9 @@ export const diagnosticPage: DiagnosticPageContent = {
     ],
   },
   painSection: {
-    title: "Enterprise leaders do not lack data. They lack connected truth.",
+    title: "The handoffs are where work gets stuck.",
     subtitle:
-      "Decisions stall because the business is a hundred disconnected sources of partial truth — owned by no one, reconciled by no one, and out of date by the time the meeting starts. The 48-Hour Diagnostic cuts through this in two days.",
+      "An order can wait on a drawing, a supplier update or an approval while everyone works from a different tracker. Redesigning the process means changing who sees the evidence, who decides and how the next action happens. The 48-Hour Diagnostic cuts through this in two days.",
     points: [
       "ERPs, CRMs, HRMS, and MES speak different languages and never reconcile cleanly",
       "Financial reports, operational data, and strategic plans tell three different stories — and none match",
@@ -1734,9 +1712,9 @@ export const aboutPage = {
 export const contactPage = {
   hero: {
     eyebrow: "Contact",
-    title: "Start with a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic",
+    title: "Redesign One Business Process",
     subtitle:
-      "Tell us about your business and the question you are trying to answer. We will come back within one business day.",
+      "Tell us which process slows revenue, margin, cash or execution. Share the main handoff, the people involved and what better would look like.",
   },
   details: {
     email: "mohan@rightsense.in",
@@ -1798,14 +1776,14 @@ export const contactPage = {
     },
     {
       name: "challenge",
-      label: "Main business challenge",
+      label: "Process and business outcome",
       type: "textarea",
       required: true,
-      placeholder: "What question are you trying to answer?",
+      placeholder: "For example: orders wait on engineering release and supplier dates. We want fewer late shipments.",
     },
     {
       name: "platform",
-      label: "Interested platform",
+      label: "Relevant accelerator (optional)",
       type: "select",
       required: false,
       options: ["PulseIQ", "WinsProposal", "TalentPulse", "Not sure yet"],
