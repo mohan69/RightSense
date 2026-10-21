@@ -45,6 +45,15 @@ npm run start    # serve production build
 npm run lint     # eslint
 ```
 
+## Hostinger VPS review staging
+
+`docker-compose.staging.yml` builds the current positioning branch as a separate
+Next.js container and publishes it on VPS port `3001` (container port `3000`).
+In Hostinger Docker Manager, import the Compose file from the branch's raw
+GitHub URL. The VPS firewall must allow inbound TCP `3001` for the public review
+link to work. This staging setup does not change the production domain or its
+existing containers.
+
 ## Conventions
 
 - All copy lives in `src/lib/content.ts`; pages render from typed data.
