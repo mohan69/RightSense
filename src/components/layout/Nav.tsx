@@ -24,7 +24,7 @@ export function Nav() {
           <span>{siteConfig.shortName}</span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1">
           {marketNav.map((item) => {
             const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
@@ -66,14 +66,14 @@ export function Nav() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-700"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-700"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {open ? (
-        <div className="lg:hidden border-t border-line bg-white">
+        <div className="md:hidden border-t border-line bg-white">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4">
             {marketNav.map((item) => (
               <Link
