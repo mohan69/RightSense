@@ -8,8 +8,8 @@ import { primaryNav, siteConfig } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const marketNav = primaryNav.filter((item) => ["/ai-process-redesign", "/manufacturing-use-cases", "/platforms", "/about"].includes(item.href));
-const productNav = primaryNav.filter((item) => ["/pulseiq", "/winsproposal", "/talentpulse"].includes(item.href));
+const marketNav = primaryNav.filter((item) => ["/manufacturing-use-cases", "/48-hour-diagnostic", "/about"].includes(item.href));
+const productNav = primaryNav.filter((item) => ["/pulseiq", "/winsproposal"].includes(item.href));
 
 export function Nav() {
   const pathname = usePathname();
@@ -24,7 +24,7 @@ export function Nav() {
           <span>{siteConfig.shortName}</span>
         </Link>
 
-        <nav className="hidden xl:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1">
           {marketNav.map((item) => {
             const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
@@ -57,8 +57,8 @@ export function Nav() {
           </a>
         </nav>
 
-        <div className="hidden xl:flex items-center gap-2">
-          <Link href="/contact"><Button size="sm">Redesign One Business Process</Button></Link>
+        <div className="hidden lg:flex items-center gap-2">
+          <Link href="/contact?source=48-hour-diagnostic"><Button size="sm">Start the Diagnostic</Button></Link>
         </div>
 
         <button
@@ -66,14 +66,22 @@ export function Nav() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="xl:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-700"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-line text-ink-700"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
+      <nav aria-label="Quick navigation" className="md:hidden flex items-center gap-1 overflow-x-auto border-t border-line px-4 py-2">
+        {[...marketNav, ...productNav].map((item) => (
+          <Link key={item.href} href={item.href} className="shrink-0 rounded-md px-3 py-2 text-sm font-medium text-ink-700 hover:bg-canvas">
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+
       {open ? (
-        <div className="xl:hidden border-t border-line bg-white">
+        <div className="md:hidden border-t border-line bg-white">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4">
             {marketNav.map((item) => (
               <Link
@@ -94,8 +102,8 @@ export function Nav() {
             <a href="https://advaitha.tech/" onClick={closeMenu} className="rounded-md px-3 py-2 text-sm font-medium text-ink-700 hover:bg-canvas">
               Advaitha
             </a>
-            <Link href="/contact" onClick={closeMenu} className="mt-2">
-              <Button className="w-full">Redesign One Business Process</Button>
+            <Link href="/contact?source=48-hour-diagnostic" onClick={closeMenu} className="mt-2">
+              <Button className="w-full">Start the Diagnostic</Button>
             </Link>
           </nav>
         </div>

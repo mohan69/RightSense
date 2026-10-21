@@ -1,178 +1,116 @@
 import type { Metadata } from "next";
-import { BarChart3, CheckCircle2, Layers, Percent, Shield, Target, Truck } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Clock, FileCheck2, ShieldCheck, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/sections/CTASection";
 import { PageHero } from "@/components/sections/PageHero";
 import { SectionHeader } from "@/components/sections/SectionHeader";
-import { diagnosticPage } from "@/lib/content";
+import { diagnostic } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: diagnosticPage.hero.title,
-  description: diagnosticPage.hero.subtitle,
+  title: "48-Hour Outcome Diagnostic",
+  description:
+    "A focused, founder-led diagnostic for one manufacturing or project-business problem, with an evidence map, KPI baseline, illustrative value model and 30-day proof plan.",
   path: "/48-hour-diagnostic",
 });
 
-const pillarIcons = [
-  <BarChart3 key="r" className="h-6 w-6 text-brand-600" />,
-  <Layers key="o" className="h-6 w-6 text-brand-600" />,
-  <Percent key="m" className="h-6 w-6 text-brand-600" />,
-  <Shield key="c" className="h-6 w-6 text-brand-600" />,
-  <Truck key="v" className="h-6 w-6 text-brand-600" />,
-  <Target key="a" className="h-6 w-6 text-brand-600" />,
+const scope = [
+  {
+    title: "One business boundary",
+    description: "One plant, project, product family, order cohort or proposal workflow—not an enterprise-wide transformation review.",
+  },
+  {
+    title: "One management decision",
+    description: "A specific revenue, margin, delivery, cash or productivity decision with a named executive sponsor and operating owner.",
+  },
+  {
+    title: "Up to three initial sources",
+    description: "Read-only exports, reports or approved documents from the systems that contain the minimum relevant evidence.",
+  },
+  {
+    title: "Up to five stakeholder interviews",
+    description: "Short working interviews with the people who own the evidence, make the decision and verify the outcome.",
+  },
+];
+
+const requiredInputs = [
+  "A one-paragraph description of the problem and the decision leadership needs to make",
+  "A named executive sponsor and day-to-day operating owner",
+  "A representative baseline period or cohort for comparison",
+  "Approved exports or documents from up to three initial evidence sources",
+  "Existing KPI definitions, even if teams currently calculate them differently",
+  "Known security, customer, contractual or regulatory constraints",
+];
+
+const exclusions = [
+  "No production-system writeback or autonomous operational control",
+  "No full ERP, MES, PLM or CRM implementation",
+  "No ISO certification, legal opinion, statutory audit or regulatory approval",
+  "No guaranteed savings, revenue uplift, delivery improvement or platform fit",
 ];
 
 export default function Diagnostic48Page() {
   return (
     <>
       <PageHero
-        eyebrow={diagnosticPage.hero.eyebrow}
-        title={diagnosticPage.hero.title}
-        subtitle={diagnosticPage.hero.subtitle}
+        eyebrow="Focused entry offer · Powered by PulseIQ"
+        title="The 48-Hour Outcome Diagnostic"
+        subtitle="Bring one economically important manufacturing or project-business problem. Leave with a defensible scope, evidence map, KPI baseline, illustrative value model and a decision on the smallest proof worth running."
       />
 
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <SectionHeader
-            title={diagnosticPage.whoItsFor.title}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
+            eyebrow="Scope"
+            title="Narrow enough to finish. Specific enough to act on."
+            subtitle="The 48-hour clock starts after the scope, owners and agreed inputs are available. Calendar scheduling and customer-side access delays are outside the 48-hour working window."
           />
-          <ul className="mt-10 space-y-4">
-            {diagnosticPage.whoItsFor.roles.map((r, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-4 rounded-2xl border border-line/60 bg-white/80 p-6 shadow-sm"
-              >
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-100 text-brand-700 text-xs font-semibold shrink-0">
-                  {i + 1}
-                </span>
-                <span className="text-base text-ink-800 leading-relaxed">
-                  {r}
-                </span>
-              </li>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2">
+            {scope.map((item, index) => (
+              <article key={item.title} className="rounded-2xl border border-line bg-canvas p-6">
+                <span className="text-xs font-bold tracking-[0.14em] text-brand-700">0{index + 1}</span>
+                <h3 className="mt-3 text-lg font-semibold text-ink-900">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-600">{item.description}</p>
+              </article>
             ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="bg-canvas">
-        <div className="mx-auto max-w-4xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            title={diagnosticPage.painSection.title}
-            subtitle={diagnosticPage.painSection.subtitle}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
-          />
-          <ul className="mt-12 space-y-4">
-            {diagnosticPage.painSection.points.map((p, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-3 text-base text-ink-800 leading-relaxed"
-              >
-                <span className="mt-1.5 h-2 w-2 rounded-full bg-brand-600 shrink-0" />
-                <span className="leading-relaxed">{p}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="bg-white">
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="Inputs"
-            title={diagnosticPage.inputsSummary.title}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
-          />
-          <ul className="mt-12 grid gap-4 sm:grid-cols-2">
-            {diagnosticPage.inputsSummary.items.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-4 rounded-2xl border border-line/60 bg-canvas/50 p-6"
-              >
-                <CheckCircle2 className="mt-0.5 h-5 w-5 text-success-600 shrink-0" />
-                <span className="text-base text-ink-800 leading-relaxed">
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
+          </div>
         </div>
       </section>
 
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="Six pillars"
-            title={diagnosticPage.pillarsSection.title}
-            subtitle={diagnosticPage.pillarsSection.subtitle}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
-          />
-          <div className="mt-14 space-y-8">
-            {diagnosticPage.pillarsSection.pillars.map((p, i) => (
-              <div
-                key={p.num}
-                className="rounded-2xl border border-line/60 bg-white/80 p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                <div className="flex items-start gap-5">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 shrink-0">
-                    {pillarIcons[i]}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-baseline gap-3">
-                      <span className="text-xs font-bold tracking-[0.14em] text-brand-700">
-                        Pillar {p.num}
-                      </span>
-                    </div>
-                    <h3 className="mt-2 text-xl font-semibold text-ink-950 tracking-tight">
-                      {p.title}
-                    </h3>
-                    <p className="mt-2 text-base text-ink-600 leading-relaxed">
-                      {p.summary}
-                    </p>
-                    <ul className="mt-5 space-y-2">
-                      {p.items.map((item) => (
-                        <li
-                          key={item}
-                          className="flex items-start gap-3 text-base text-ink-800 leading-relaxed"
-                        >
-                          <span className="mt-1.5 h-2 w-2 rounded-full bg-brand-600 shrink-0" />
-                          <span className="leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-700">Working inputs</p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ink-900">What we need to begin</h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-600">
+                Start with available evidence. Gaps are documented rather than disguised with assumptions.
+              </p>
+            </div>
+            <ul className="grid gap-3">
+              {requiredInputs.map((item) => (
+                <li key={item} className="flex items-start gap-3 rounded-xl border border-line bg-white p-5 text-sm leading-relaxed text-ink-700">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-success-600" /> {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            title={diagnosticPage.process.title}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
-          />
-          <ol className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {diagnosticPage.process.steps.map((s) => (
-              <li
-                key={s.num}
-                className="relative rounded-2xl border border-line/60 bg-canvas/50 p-7 shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                <div className="flex items-baseline gap-3">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 text-white text-xs font-semibold shrink-0">
-                    {s.num}
-                  </span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-brand-700">
-                    {s.window}
-                  </span>
+          <SectionHeader eyebrow="Working plan" title="The 48-hour arc" />
+          <ol className="mt-12 grid gap-4 lg:grid-cols-5">
+            {diagnostic.steps.map((step) => (
+              <li key={step.num} className="rounded-2xl border border-line bg-canvas p-6">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-600 text-xs font-semibold text-white">{step.num}</span>
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-700">{step.window}</span>
                 </div>
-                <h3 className="mt-4 text-base font-semibold text-ink-950">
-                  {s.title}
-                </h3>
-                <p className="mt-3 text-base text-ink-700 leading-relaxed">
-                  {s.description}
-                </p>
+                <h3 className="mt-5 text-base font-semibold text-ink-900">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-600">{step.description}</p>
               </li>
             ))}
           </ol>
@@ -181,103 +119,52 @@ export default function Diagnostic48Page() {
 
       <section className="bg-canvas">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="Deliverables"
-            title={diagnosticPage.deliverables.title}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
-          />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2">
-            {diagnosticPage.deliverables.items.map((d) => (
-              <div
-                key={d.title}
-                className="rounded-2xl border border-line/60 bg-white/80 p-8 shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                <h3 className="text-lg font-semibold text-ink-950 tracking-tight">
-                  {d.title}
-                </h3>
-                <p className="mt-4 text-base text-ink-700 leading-relaxed">
-                  {d.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div className="rounded-2xl border border-line bg-white p-8">
+              <div className="flex items-center gap-3 text-brand-700"><FileCheck2 className="h-6 w-6" /><span className="text-xs font-semibold uppercase tracking-[0.14em]">Deliverables</span></div>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink-900">What you receive</h2>
+              <ul className="mt-7 space-y-4">
+                {diagnostic.deliverables.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-ink-700">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-success-600" /> {item}
+                  </li>
+                ))}
+                <li className="flex items-start gap-3 text-sm leading-relaxed text-ink-700">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-success-600" /> Founder-led readout and a proceed / pause / stop recommendation
+                </li>
+              </ul>
+            </div>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="Standards coverage"
-            title={diagnosticPage.standards.title}
-            subtitle={diagnosticPage.standards.subtitle}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
-          />
-          <div className="mt-14 space-y-10">
-            {diagnosticPage.standards.categories.map((cat) => (
-              <div key={cat.name}>
-                <h3 className="text-lg font-semibold text-ink-950 tracking-tight">
-                  {cat.name}
-                </h3>
-                <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-                  {cat.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-base text-ink-800 leading-relaxed"
-                    >
-                      <span className="mt-1.5 h-2 w-2 rounded-full bg-brand-600 shrink-0" />
-                      <span className="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <div className="rounded-2xl border border-line bg-white p-8">
+              <div className="flex items-center gap-3 text-brand-700"><ShieldCheck className="h-6 w-6" /><span className="text-xs font-semibold uppercase tracking-[0.14em]">Boundaries</span></div>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink-900">What is not included</h2>
+              <ul className="mt-7 space-y-4">
+                {exclusions.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-ink-700">
+                    <Target className="mt-0.5 h-5 w-5 shrink-0 text-ink-400" /> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="mt-10 rounded-2xl border border-amber-200 bg-amber-50/80 p-6">
-            <p className="text-sm text-amber-800 leading-relaxed">
-              <strong>Note:</strong> {diagnosticPage.standards.disclaimer}
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <section className="bg-canvas">
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
-          <SectionHeader
-            eyebrow="Trust and privacy"
-            title={diagnosticPage.security.title}
-            titleClassName="text-3xl sm:text-4xl font-semibold tracking-tight text-ink-950"
-          />
-          <ul className="mt-12 grid gap-4 sm:grid-cols-2">
-            {diagnosticPage.security.points.map((p) => (
-              <li
-                key={p}
-                className="flex items-start gap-4 rounded-2xl border border-line/60 bg-white/80 p-6 shadow-sm"
-              >
-                <Shield className="mt-0.5 h-5 w-5 text-brand-600 shrink-0" />
-                <span className="text-base text-ink-800 leading-relaxed">
-                  {p}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="bg-white">
-        <div className="mx-auto max-w-4xl px-6 py-20 sm:py-24">
-          <div className="rounded-2xl border border-amber-200 bg-amber-50/80 p-8 sm:p-10">
-            <p className="text-base text-amber-800 leading-relaxed">
-              {diagnosticPage.disclaimer}
-            </p>
+          <div className="mt-8 flex flex-col items-start justify-between gap-5 rounded-2xl border border-brand-200 bg-brand-50 p-7 sm:flex-row sm:items-center">
+            <div>
+              <p className="flex items-center gap-2 text-sm font-semibold text-ink-900"><Clock className="h-4 w-4 text-brand-700" /> Ready to test the fit?</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-600">Send the problem, company and preferred contact details. The form prepares an email directly to a RightSense co-founder; phone and email are also available on the contact page.</p>
+            </div>
+            <Link href="/contact?source=48-hour-diagnostic" className="shrink-0">
+              <Button size="lg">Start the diagnostic conversation <ArrowRight className="h-4 w-4" /></Button>
+            </Link>
           </div>
         </div>
       </section>
 
       <CTASection
-        title={diagnosticPage.cta.title}
-        subtitle={diagnosticPage.cta.subtitle}
-        primaryCta={diagnosticPage.cta.primaryCta}
-        secondaryCta={diagnosticPage.cta.secondaryCta}
+        title="One problem. One evidence boundary. One decision on what to do next."
+        subtitle="No platform commitment is required for the diagnostic. If the evidence does not support a credible proof, the recommendation can be to stop."
+        primaryCta={{ label: "Prepare a Diagnostic Request", href: "/contact?source=48-hour-diagnostic" }}
+        secondaryCta={{ label: "Email Mohan Directly", href: "mailto:mohan@rightsense.in?subject=RightSense%2048-Hour%20Outcome%20Diagnostic" }}
       />
     </>
   );

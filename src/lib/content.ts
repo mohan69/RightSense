@@ -38,9 +38,9 @@ import type {
 export const siteConfig = {
   name: "RightSense Technologies",
   shortName: "RightSense",
-  tagline: "Human + AI process redesign for industrial and project-driven businesses.",
+  tagline: "Enterprise AI. Measurable Business Outcomes.",
   description:
-    "Human + AI process redesign for industrial and project-driven businesses.",
+    "Enterprise AI for manufacturing, EPC, valve and pump businesses—starting with one measurable revenue, margin, delivery or cash outcome.",
   url: "https://rightsense.in",
   contactEmail: "contact@rightsense.in",
 } as const;
@@ -126,15 +126,14 @@ export const ecosystemAdvaitha = {
 } as const;
 
 export const hero: HeroContent = {
-  eyebrow: "Human + AI process redesign for industrial and project-driven businesses.",
-  headline:
-    "Human + AI process redesign for industrial and project-driven businesses.",
+  eyebrow: "Enterprise AI for manufacturing and project businesses.",
+  headline: "Enterprise AI. Measurable Business Outcomes.",
   subheadline:
-    "RightSense helps industrial and enterprise businesses move from fragmented systems, documents, spreadsheets, emails, and manual decisions to AI-powered operating intelligence.",
+    "RightSense helps manufacturing, EPC, valve and pump businesses connect operational evidence to the decisions that protect revenue, margin, delivery and cash.",
   support:
-    "We connect financials, strategy decks, SOPs, ERP/CRM/HRMS data, Excel trackers, proposals, emails, meetings, and workforce signals to build the Enterprise Truth Map — and use it to forecast next-quarter performance, simulate scenarios, and recommend board-ready actions.",
-  primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
-  secondaryCta: { label: "Explore Platforms", href: "/platforms" },
+    "Start with one economically important problem. PulseIQ provides the initial evidence-to-outcome layer; our founders lead the diagnostic, proof and decision to scale.",
+  primaryCta: { label: "Start the 48-Hour Diagnostic", href: "/contact?source=48-hour-diagnostic" },
+  secondaryCta: { label: "See Two Use Cases", href: "/#featured-use-cases" },
 };
 
 export const problemSection: SectionContent = {
@@ -353,53 +352,53 @@ export const diagnostic: {
   deliverables: string[];
   cta: CtaLink;
 } = {
-  title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
+  title: "The 48-Hour Outcome Diagnostic, powered by PulseIQ.",
   subtitle:
-    "A focused, executive-grade engagement that delivers a board-ready view of enterprise truth in 48 hours — not 48 weeks.",
+    "A tightly scoped working session for one plant, project, product family or order cohort. The 48-hour clock starts after the agreed inputs are available.",
   steps: [
     {
       num: "01",
-      window: "Hour 0–4",
-      title: "Secure data intake",
+      window: "Before hour 0",
+      title: "Confirm the boundary",
       description:
-        "Read-only access, exports, or secure uploads from ERP, CRM, HRMS, finance, Excel trackers, documents, and selected collaboration sources — whatever fits your IT and security posture.",
+        "Agree one management problem, one accountable sponsor, the decision in scope, the baseline period and no more than three initial evidence sources.",
     },
     {
       num: "02",
-      window: "Hour 4–12",
-      title: "Connect and verify",
+      window: "Hour 0–12",
+      title: "Map evidence and baseline",
       description:
-        "Connect to source systems, verify ingestion, and reconcile entity definitions across them.",
+        "Review read-only exports or approved documents, reconcile definitions and document missing or stale evidence. No production integration is required for the diagnostic.",
     },
     {
       num: "03",
       window: "Hour 12–28",
-      title: "Map the operating model",
+      title: "Trace the decision and exposure",
       description:
-        "Map processes, decision flows, and ownership against the real shape of the business — not the org chart.",
+        "Show where the decision currently stalls, who owns it, which customer or financial outcome it can affect and which assumptions remain unverified.",
     },
     {
       num: "04",
       window: "Hour 28–40",
-      title: "Rank the opportunities",
+      title: "Design the smallest proof",
       description:
-        "Generate the opportunity map — ranked by revenue, margin, cash, productivity, speed, and risk impact.",
+        "Define the Human + AI workflow, decision controls, KPI baseline, illustrative value range and the minimum PulseIQ evidence path needed to test it.",
     },
     {
       num: "05",
       window: "Hour 40–48",
-      title: "Executive readout",
+      title: "Founder-led decision readout",
       description:
-        "Deliver a board-ready briefing with prioritized actions, named owners, and a 30/60/90 day plan.",
+        "Review the findings, risks and 30-day proof plan. Decide together to proceed, gather better evidence or stop—without a platform commitment.",
     },
   ],
   deliverables: [
-    "Enterprise truth map — one current view of the business leadership can align on",
-    "5–10 prioritized opportunities with quantified ₹ impact ranges",
-    "30/60/90 day execution plan with named owners and KPIs",
-    "Board-ready briefing document for the next leadership review",
+    "One-page problem, scope and decision definition",
+    "Evidence map with source owners, freshness and gaps",
+    "Baseline KPI dictionary and illustrative value model",
+    "Ranked intervention options and a practical 30-day proof plan",
   ],
-  cta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
+  cta: { label: "Review Scope & Deliverables", href: "/48-hour-diagnostic" },
 };
 
 export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
@@ -562,17 +561,17 @@ export const platformsPage = {
     },
     {
       platform: "PulseIQ",
-      role: "Enterprise operating intelligence",
+      role: "Initial industrial decision and value intelligence layer",
       href: "/pulseiq",
       description:
-        "Maps the operating model, ranks opportunities, and drives execution against the seven board-level outcomes.",
+        "Connects the minimum approved evidence to customer commitments, governed decisions and a measurable value record.",
     },
     {
       platform: "WinsProposal",
       role: "Revenue and proposal intelligence",
       href: "/winsproposal",
       description:
-        "Turns proposals, RFPs, and pricing into a learning loop that lifts win rate and protects margin.",
+        "Provides the purpose-built workflow when RFQ, proposal or pricing performance is the scoped problem.",
     },
     {
       platform: "TalentPulse",
@@ -588,9 +587,9 @@ export const platformsPage = {
   cta: {
     title: "Start with PulseIQ. Add the others when ready.",
     subtitle:
-      "Most clients start with the 48-Hour Diagnostic on PulseIQ and expand into WinsProposal and TalentPulse as the truth map matures.",
+      "For the initial manufacturing cohort, PulseIQ is the primary evidence-to-outcome entry layer. WinsProposal is introduced when the first measurable problem sits in RFQ, proposal or pricing performance.",
     primaryCta: { label: "Explore PulseIQ", href: "/pulseiq" },
-    secondaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
+    secondaryCta: { label: "Start the Diagnostic", href: "/contact?source=48-hour-diagnostic" },
   },
 } as const;
 
@@ -800,7 +799,7 @@ export const winsproposalPage = {
     eyebrow: "WinsProposal",
     title: "WinsProposal: Revenue and Proposal Intelligence Platform",
     subtitle:
-      "Help EPC, valve, pump, industrial equipment, and manufacturing companies improve proposal speed, quality, compliance, and win probability — without adding headcount to the proposal team.",
+      "A purpose-built option when an EPC, valve, pump or industrial manufacturer chooses RFQ, proposal or pricing performance as the first measurable problem.",
   },
   targetUsers: {
     title: "Built for the people who actually win the deal",
@@ -853,7 +852,7 @@ export const winsproposalPage = {
       {
         title: "Knowledge vault",
         description:
-          "A living library of past proposals, case studies, technical content, and pricing patterns that gets smarter with every deal.",
+          "A governed library of approved proposal, technical and pricing content with provenance and access control.",
       },
       {
         title: "Drawing and visualization intelligence",
@@ -873,26 +872,26 @@ export const winsproposalPage = {
     ] satisfies Capability[],
   },
   outcomes: {
-    title: "Outcomes",
+    title: "KPIs to baseline and verify",
     items: [
-      "Faster proposal turnaround — measured in days, not weeks.",
-      "Better compliance — fewer disqualifications, fewer post-submission surprises.",
-      "Improved win-rate visibility — know where you win, where you lose, and why.",
-      "Reduced engineering rework — fewer clarification loops and re-quotes.",
-      "Better revenue conversion — a tighter loop from opportunity to close.",
+      "Median and P90 proposal turnaround time by complexity and product family.",
+      "First-pass technical and commercial completeness.",
+      "Engineering and reviewer hours per issued proposal.",
+      "Share of proposals issued within approved pricing and margin policy.",
+      "Win rate and contribution margin over a disclosed, comparable sales-cycle sample.",
     ],
   },
   fitWithPulseiq: {
     title: "How WinsProposal fits with PulseIQ",
     body:
-      "WinsProposal generates the revenue-side truth layer — pipeline, proposal, pricing, and win/loss signals. PulseIQ consumes that layer to feed its Enterprise Truth Map, Executive Cockpit, and recommendation engine. Together they form the revenue and operating intelligence core of the RightSense platform family.",
+      "Use WinsProposal when the scoped problem is RFQ, proposal or pricing performance. Its approved pipeline, proposal, pricing and win/loss signals can then feed PulseIQ, which remains the broader entry layer for operating evidence, customer commitments and verified business value.",
   } satisfies FitWithPlatform,
   cta: {
     title: "See WinsProposal in your pipeline.",
     subtitle:
       "Visit the WinsProposal product site or talk to our team about a proposal intelligence pilot.",
     primaryCta: { label: "Visit WinsProposal.com", href: "https://www.winsproposal.com/" },
-    secondaryCta: { label: "Talk to our team", href: "/contact" },
+    secondaryCta: { label: "Discuss an RFQ proof", href: "/contact?source=winsproposal-rfq-proof" },
   },
 } as const;
 
@@ -1712,9 +1711,9 @@ export const aboutPage = {
 export const contactPage = {
   hero: {
     eyebrow: "Contact",
-    title: "Redesign One Business Process",
+    title: "Bring one economically important problem",
     subtitle:
-      "Tell us which process slows revenue, margin, cash or execution. Share the main handoff, the people involved and what better would look like.",
+      "Send a short description of the decision or workflow affecting revenue, margin, delivery, cash or productivity. A RightSense co-founder will review the fit.",
   },
   details: {
     email: "mohan@rightsense.in",
@@ -1736,13 +1735,6 @@ export const contactPage = {
       type: "text",
       required: true,
       placeholder: "Company name",
-    },
-    {
-      name: "role",
-      label: "Role",
-      type: "text",
-      required: true,
-      placeholder: "Your role",
     },
     {
       name: "email",
@@ -1776,67 +1768,54 @@ export const contactPage = {
     },
     {
       name: "challenge",
-      label: "Process and business outcome",
+      label: "Priority problem and measurable outcome",
       type: "textarea",
       required: true,
-      placeholder: "For example: orders wait on engineering release and supplier dates. We want fewer late shipments.",
-    },
-    {
-      name: "platform",
-      label: "Relevant accelerator (optional)",
-      type: "select",
-      required: false,
-      options: ["PulseIQ", "WinsProposal", "TalentPulse", "Not sure yet"],
-    },
-    {
-      name: "demoDate",
-      label: "Preferred demo date",
-      type: "date",
-      required: false,
+      placeholder: "For example: project milestones slip when engineering releases and supplier dates are not reconciled. We want to improve risk lead time and on-time billing.",
     },
   ] satisfies FormField[],
 } as const;
 
 export const whyRightSense: WhyRightSense = {
   eyebrow: "Why RightSense",
-  title: "Why RightSense, in five points.",
+  title: "Designed for a small, measurable first move.",
   subtitle:
-    "Five reasons enterprise leaders choose RightSense over BI tools, ERP consultants, AI agencies, and strategy firms.",
+    "The initial offer is intentionally narrow: one management problem, the minimum governed evidence and an explicit decision on whether to continue.",
   points: [
     {
       id: "outcome",
       icon: "Target",
       title: "Outcomes, not dashboards",
       description:
-        "Every engagement is anchored to revenue, margin, cash, productivity, speed, and risk — not to charts no one acts on.",
+        "Each scope names the revenue, margin, delivery, cash, productivity or risk KPI before the proof begins.",
     },
     {
-      id: "truth",
+      id: "industrial-context",
       icon: "Layers",
-      title: "Seven sources of truth, one layer",
+      title: "Industrial context",
       description:
-        "Financial, strategic, operational, process, collaboration, revenue, and talent truth connected in a single model.",
+        "The value model reflects engineered products, project milestones, supplier dependencies and customer commitments—not generic automation volume.",
     },
     {
-      id: "ai-native",
+      id: "human-authority",
       icon: "Sparkles",
-      title: "AI-native, not BI with AI",
+      title: "Human decision authority",
       description:
-        "Built ground-up on a modern data and AI stack — not a legacy reporting tool with AI features bolted on.",
+        "AI can assemble evidence and prepare options; authorized people retain control of technical, commercial and operational decisions.",
     },
     {
       id: "assessment",
       icon: "ClipboardCheck",
-      title: "Assessment-first, always",
+      title: "Proof before scale",
       description:
-        "Every engagement starts with a 48-Hour Diagnostic that proves the truth map before any software is sold.",
+        "Start with the smallest diagnostic or platform proof that can validate the priority. A larger rollout follows only if the evidence supports it.",
     },
     {
       id: "founder",
       icon: "UserCheck",
-      title: "Founder-led, senior-only",
+      title: "Founder-led initial cohort",
       description:
-        "Senior practitioners run every engagement. No junior teams, no offshore hand-offs, no slideware.",
+        "RightSense is focusing on five manufacturing clients so senior ownership stays close to discovery, adoption and value verification.",
     },
   ],
 };

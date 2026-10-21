@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "./content";
 
 const ecosystemDescription =
-  "Human + AI process redesign for industrial businesses. Diagnose, redesign, build, operate and verify workflows that improve revenue, margin, cash, productivity and execution.";
+  "Enterprise AI for manufacturing, EPC, valve and pump businesses—starting with one measurable revenue, margin, delivery or cash outcome.";
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),

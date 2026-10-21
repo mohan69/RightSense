@@ -5,7 +5,14 @@ import { Button } from "@/components/ui/button";
 import { contactPage, contactSubmitEmail } from "@/lib/content";
 import type { FormField } from "@/types/site";
 
-const SUBJECT = "RightSense — Redesign One Business Process";
+const DEFAULT_SUBJECT = "RightSense — Business Outcome Conversation";
+
+const sourceLabels: Record<string, string> = {
+  "48-hour-diagnostic": "48-Hour Outcome Diagnostic",
+  "pulseiq-founding-cohort": "PulseIQ Founding Cohort",
+  "founder-conversation": "Founder Conversation",
+  "winsproposal-rfq-proof": "WinsProposal RFQ Proof",
+};
 
 function FieldInput({ field }: { field: FormField }) {
   const baseClass =
@@ -66,14 +73,20 @@ export function ContactForm() {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
+    const source = new URLSearchParams(window.location.search).get("source");
     const lines: string[] = [];
+    if (source) {
+      lines.push(`Interest: ${sourceLabels[source] ?? source}`);
+    }
     data.forEach((value, key) => {
       if (typeof value === "string" && value.trim().length > 0) {
         lines.push(`${key}: ${value}`);
       }
     });
     const body = encodeURIComponent(lines.join("\n"));
-    const subject = encodeURIComponent(SUBJECT);
+    const subject = encodeURIComponent(
+      source ? `RightSense — ${sourceLabels[source] ?? source}` : DEFAULT_SUBJECT
+    );
     const href = `mailto:${contactSubmitEmail}?subject=${subject}&body=${body}`;
 
     const opened = window.open(href, "_self");
@@ -101,7 +114,7 @@ export function ContactForm() {
       ))}
 
       <Button type="submit" size="lg" className="w-full">
-        Prepare Process Redesign Request
+        Prepare Email to a Co-Founder
       </Button>
 
       {status === "opening" ? (
@@ -109,8 +122,8 @@ export function ContactForm() {
           role="status"
           className="rounded-md border border-success-100 bg-success-50 px-3 py-2 text-sm text-success-700"
         >
-          Your email client should now be opening with the form details
-          pre-filled. If it did not open, please email{" "}
+          Your email client should now be opening with the details pre-filled.
+          Review the message before sending. If it did not open, email{" "}
           <a
             href={`mailto:${contactSubmitEmail}`}
             className="font-semibold underline"
@@ -122,8 +135,8 @@ export function ContactForm() {
       ) : null}
 
       <p className="text-xs text-ink-500 leading-relaxed">
-        Submitting this form opens your email client with the details
-        pre-filled. We respond to every request within one business day.
+        This form does not send data to a website database. It opens your email
+        client with the details pre-filled so you stay in control of what is sent.
       </p>
     </form>
   );
