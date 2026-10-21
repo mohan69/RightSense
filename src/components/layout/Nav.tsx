@@ -72,6 +72,14 @@ export function Nav() {
         </button>
       </div>
 
+      <nav aria-label="Quick navigation" className="md:hidden flex items-center gap-1 overflow-x-auto border-t border-line px-4 py-2">
+        {[...marketNav, ...productNav].map((item) => (
+          <Link key={item.href} href={item.href} className="shrink-0 rounded-md px-3 py-2 text-sm font-medium text-ink-700 hover:bg-canvas">
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+
       {open ? (
         <div className="md:hidden border-t border-line bg-white">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4">
