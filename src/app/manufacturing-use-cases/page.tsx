@@ -1,5 +1,5 @@
 import { PageHero } from "@/components/sections/PageHero";
 import { ProcessRedesignSection } from "@/components/sections/ProcessRedesignSection";
 import { pageMetadata } from "@/lib/seo";
-export const metadata = pageMetadata({title:"Manufacturing Process Redesign Use Cases",description:"Six practical Human + AI workflows for orders, proposals, engineering, procurement, management and plant operations.",path:"/manufacturing-use-cases"});
-export default function Page(){return <><PageHero eyebrow="Manufacturing use cases" title="Six places to redesign the work" subtitle="Illustrative process designs to explore with your team. Outcomes and targets are agreed from your baseline; these are not customer case studies or promised results."/><ProcessRedesignSection/></>;}
+export const metadata = pageMetadata({title:"Manufacturing and EPC AI Use Cases",description:"Two concrete, illustrative use cases for valve and pump proposal flow and EPC project delivery, each with ROI assumptions and measurable KPIs.",path:"/manufacturing-use-cases"});
+export default function Page(){return <><PageHero eyebrow="Manufacturing and EPC use cases" title="Two measurable places to start" subtitle="Illustrative process designs for valve and pump proposal flow and EPC project delivery. Assumptions are explicit; results and targets must be established from each client's baseline."/><ProcessRedesignSection/></>;}

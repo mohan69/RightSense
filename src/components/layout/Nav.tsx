@@ -8,8 +8,8 @@ import { primaryNav, siteConfig } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const marketNav = primaryNav.filter((item) => ["/ai-process-redesign", "/manufacturing-use-cases", "/platforms", "/about"].includes(item.href));
-const productNav = primaryNav.filter((item) => ["/pulseiq", "/winsproposal", "/talentpulse"].includes(item.href));
+const marketNav = primaryNav.filter((item) => ["/manufacturing-use-cases", "/48-hour-diagnostic", "/about"].includes(item.href));
+const productNav = primaryNav.filter((item) => ["/pulseiq", "/winsproposal"].includes(item.href));
 
 export function Nav() {
   const pathname = usePathname();
@@ -58,7 +58,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden xl:flex items-center gap-2">
-          <Link href="/contact"><Button size="sm">Redesign One Business Process</Button></Link>
+          <Link href="/contact?source=48-hour-diagnostic"><Button size="sm">Start the Diagnostic</Button></Link>
         </div>
 
         <button
@@ -94,8 +94,8 @@ export function Nav() {
             <a href="https://advaitha.tech/" onClick={closeMenu} className="rounded-md px-3 py-2 text-sm font-medium text-ink-700 hover:bg-canvas">
               Advaitha
             </a>
-            <Link href="/contact" onClick={closeMenu} className="mt-2">
-              <Button className="w-full">Redesign One Business Process</Button>
+            <Link href="/contact?source=48-hour-diagnostic" onClick={closeMenu} className="mt-2">
+              <Button className="w-full">Start the Diagnostic</Button>
             </Link>
           </nav>
         </div>

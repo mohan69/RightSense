@@ -66,3 +66,70 @@ export const processCases = [
     accelerator: "PulseIQ may support traceable exception, decision and value records if its fit is demonstrated. Existing APC, DCS and safety systems remain the control authority; the initial proof does not require autonomous plant control."
   }
 ] as const;
+
+export type FeaturedIndustryUseCase = {
+  slug: string;
+  industry: string;
+  title: string;
+  challenge: string;
+  approach: string;
+  illustrativeRoi: {
+    label: string;
+    calculation: string;
+    result: string;
+    caveat: string;
+  };
+  kpis: string[];
+  accelerator: string;
+};
+
+export const featuredIndustryUseCases: FeaturedIndustryUseCase[] = [
+  {
+    slug: "rfq-proposal-cycle",
+    industry: "Valve & pump manufacturers",
+    title: "Engineer-to-order RFQ and proposal flow",
+    challenge:
+      "Specifications, sizing, costing, exceptions and approvals move through email and spreadsheets, slowing the quote while making technical and margin risk hard to see.",
+    approach:
+      "Create one governed RFQ evidence path: extract and cite requirements, reuse only approved engineering content, route deviations to specialists and retain human approval for price, margin and contractual commitments.",
+    illustrativeRoi: {
+      label: "Illustrative capacity-value scenario",
+      calculation: "600 engineered quotes/year × 2 engineer-hours released/quote × ₹1,500 loaded hourly cost",
+      result: "₹18 lakh annual capacity value",
+      caveat:
+        "Illustration only—not a customer result or forecast. Baseline hours, usable capacity and financial attribution must be validated during the diagnostic.",
+    },
+    kpis: [
+      "Median and P90 proposal cycle time",
+      "Engineering review hours per issued proposal",
+      "First-pass technical completeness",
+      "Share of proposals within approved margin policy",
+    ],
+    accelerator:
+      "WinsProposal supports the governed RFQ workflow; PulseIQ connects proposal decisions to downstream order, margin and delivery outcomes.",
+  },
+  {
+    slug: "order-execution-risk",
+    industry: "EPC & project manufacturing",
+    title: "Project delivery, margin and cash exposure",
+    challenge:
+      "Engineering releases, supplier commitments, site milestones, change orders and billing events live in different systems, so a project can look on track after recovery time has already narrowed.",
+    approach:
+      "Use PulseIQ to connect approved project evidence to customer commitments, quantify modeled exposure and route recovery options to the accountable project, commercial and finance owners.",
+    illustrativeRoi: {
+      label: "Illustrative value-at-risk scenario",
+      calculation: "₹25 crore scoped project portfolio × 0.5% avoidable cost or leakage acted on in time",
+      result: "₹12.5 lakh potential protected value",
+      caveat:
+        "Illustration only—not a promise of savings. Value is recognized only after the action, observed outcome and finance-approved attribution are recorded.",
+    },
+    kpis: [
+      "Risk lead time before committed milestone",
+      "Approved change-order cycle time",
+      "Project gross-margin variance at completion",
+      "Milestone billing achieved on the planned date",
+    ],
+    accelerator:
+      "PulseIQ is the initial operating-intelligence layer for the evidence, decision and value record.",
+  },
+];

@@ -1,17 +1,22 @@
 # RightSense Technologies — Marketing Website
 
-The primary offer is **Redesign One Business Process**. RightSense diagnoses,
-redesigns, implements, operates and verifies Human + AI workflows. Advaitha
-provides strategy, decision architecture and governance. PulseIQ, WinsProposal
-and TalentPulse are optional accelerators.
+The homepage position is **Enterprise AI. Measurable Business Outcomes.**
+RightSense is focused on a founder-led initial cohort of five manufacturing
+clients. PulseIQ is the initial operating-intelligence entry offering; the
+48-Hour Outcome Diagnostic defines the smallest evidence path and proof worth
+running. WinsProposal is the purpose-built option when RFQ, proposal or pricing
+performance is the selected problem.
 
 Public entry points:
 
 - `/ai-process-redesign` — service and method
-- `/manufacturing-use-cases` — five illustrative manufacturing workflows
+- `/manufacturing-use-cases` — two featured illustrative industry use cases,
+  with explicit ROI assumptions and measurable KPIs
+- `/48-hour-diagnostic` — scope, inputs, timeline, deliverables, exclusions and
+  the practical contact path
 - `/order-execution-demo` — synthetic, browser-only order execution simulation
 
-The demo uses invented records and amounts. It has no live model, persistence,
+All use-case ROI scenarios and demo records are illustrative. The demo has no live model, persistence,
 authentication or enterprise integration. Its financial result is a simulated
 verification event, not customer evidence. A live implementation requires
 source integration, role permissions and approvals, operational monitoring,

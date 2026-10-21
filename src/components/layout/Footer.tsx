@@ -2,10 +2,10 @@ import Link from "next/link";
 import { ecosystemAdvaitha, siteConfig, platforms, primaryNav } from "@/lib/content";
 
 const parentDescription =
-  "Human + AI process redesign for industrial businesses. Improve execution, support adoption and verify business value.";
+  "Enterprise AI for manufacturing and project businesses—starting with one measurable business outcome.";
 
 const siteLinks = primaryNav.filter(
-  (item) => item.href !== "/" && item.href !== "/48-hour-diagnostic" && item.href !== "/assessment"
+  (item) => item.href !== "/" && item.href !== "/assessment"
 ).slice(0, 6);
 
 export function Footer() {
