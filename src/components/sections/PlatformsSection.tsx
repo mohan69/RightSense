@@ -58,7 +58,7 @@ export function PlatformsSection() {
           </div>
         </a>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 lg:grid-cols-4">
           {platforms.filter((p) => p.name !== "Advaitha").map((p) => {
             const Icon = platformIcons[p.icon as keyof typeof platformIcons];
             const copy = canonicalCopy[p.name];
