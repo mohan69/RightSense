@@ -85,6 +85,19 @@ export const platforms = [
     ],
   },
   {
+    name: "ConfirmIQ",
+    href: "/confirmiq",
+    summary: "Assisted Trade Capture & Validation",
+    icon: "FileText",
+    description:
+      "Turns broker confirmations into structured, CTRM-ready trade data, highlights missing or conflicting terms, and keeps exception review and approval with authorized people.",
+    outcomes: [
+      "Less manual rekeying of confirmation details",
+      "Exceptions surfaced for human review",
+      "Approved structured records prepared for CTRM handoff",
+    ],
+  },
+  {
     name: "WinsProposal",
     href: "/winsproposal",
     summary: "Revenue and Proposal Intelligence Platform",
@@ -546,10 +559,10 @@ export const platformsPage = {
     eyebrow: "The portfolio",
     title: "A portfolio architecture for RightSense Enterprise Intelligence.",
     subtitle:
-      "Advaitha sets the strategy and governance spine. WinsProposal, PulseIQ, and TalentPulse compound revenue, operating, and workforce intelligence into one enterprise decision system.",
+      "Advaitha sets the strategy and governance spine. ConfirmIQ, WinsProposal, PulseIQ, and TalentPulse support governed trade capture, revenue, operating, and workforce decisions.",
   },
   portfolioIntro:
-    "Each product has a distinct job. Together they create a governed learning loop: strategy defines the guardrails, revenue signals feed operating decisions, operating decisions expose talent and capacity gaps, and talent signals feed revenue planning.",
+    "Each product has a distinct job. Together they support governed trade capture, revenue, operating and workforce decisions, with strategy and decision rights defined up front.",
   portfolioLogicTitle: "What each platform does",
   portfolioLogic: [
     {
@@ -565,6 +578,13 @@ export const platformsPage = {
       href: "/pulseiq",
       description:
         "Connects the minimum approved evidence to customer commitments, governed decisions and a measurable value record.",
+    },
+    {
+      platform: "ConfirmIQ",
+      role: "Assisted trade capture and validation",
+      href: "/confirmiq",
+      description:
+        "Extracts broker confirmation details into a generic CTRM-ready structure, flags exceptions, and leaves approval with an authorized reviewer.",
     },
     {
       platform: "WinsProposal",
@@ -583,7 +603,7 @@ export const platformsPage = {
   ] satisfies PortfolioRole[],
   connectionTitle: "How the portfolio connects",
   connectionBody:
-    "Advaitha defines the guardrails and decision rights. Revenue intelligence (WinsProposal), operating intelligence (PulseIQ), and workforce intelligence (TalentPulse) form the connected enterprise truth layer. Revenue signals feed operating decisions, operating decisions expose talent and capacity gaps, and talent signals feed revenue planning. The loop compounds.",
+    "Advaitha defines the guardrails and decision rights. Assisted trade capture (ConfirmIQ), revenue intelligence (WinsProposal), operating intelligence (PulseIQ), and workforce intelligence (TalentPulse) support connected enterprise decisions. Use each platform where it fits a defined workflow, with evidence and approval responsibilities made explicit.",
   cta: {
     title: "Start with PulseIQ. Add the others when ready.",
     subtitle:
