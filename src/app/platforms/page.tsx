@@ -45,7 +45,7 @@ export default function PlatformsPage() {
             <p className="mt-1 text-sm font-medium text-brand-700">{ecosystemAdvaitha.summary}</p>
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-700">{ecosystemAdvaitha.description}</p>
           </a>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {platformsPage.portfolioLogic.map((p) => {
               const platformData = platforms.find(
                 (pl) => pl.name === p.platform
