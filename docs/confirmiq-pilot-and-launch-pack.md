@@ -7,7 +7,7 @@ This pack supports a bounded customer validation of ConfirmIQ as **assisted trad
 Before testing, agree with the customer:
 
 - One confirmation-to-trade workflow, participating reviewers and a named business owner.
-- Representative broker confirmation formats with customer-approved redaction and handling.
+- Representative trade confirmation and contract document formats from marketers, brokers and traders, with customer-approved redaction and handling.
 - A frozen set of expected trade fields and the customer's generic or test-environment schema.
 - Read-only source access and a non-production destination. No production booking or autonomous approval.
 - Access, retention, deletion, reviewer roles and audit requirements.
@@ -38,7 +38,7 @@ Do not set a success threshold from synthetic demo data. Agree target values aft
 
 ## LinkedIn clarification draft
 
-ConfirmIQ is a RightSense Technologies product for assisted trade capture and validation. It helps turn broker confirmations into structured, CTRM-ready trade data, with exceptions reviewed and approved by people before handoff.
+ConfirmIQ is a RightSense Technologies product for assisted trade capture and validation. It helps turn trade documents from marketers, brokers and traders into structured, CTRM-ready trade data, with exceptions reviewed and approved by people before handoff.
 
 Advaitha is the consulting and transformation practice of RightSense Technologies. It supports the operating architecture, control model and adoption approach around commodity trading workflows. RightSense owns and develops ConfirmIQ.
 

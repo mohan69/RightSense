@@ -90,7 +90,7 @@ export const platforms = [
     summary: "Assisted Trade Capture & Validation",
     icon: "FileText",
     description:
-      "Turns broker confirmations into structured, CTRM-ready trade data, highlights missing or conflicting terms, and keeps exception review and approval with authorized people.",
+      "Turns trade documents from marketers, brokers and traders into structured, CTRM-ready trade data, highlights missing or conflicting terms, and keeps exception review and approval with authorized people.",
     outcomes: [
       "Less manual rekeying of confirmation details",
       "Exceptions surfaced for human review",
@@ -584,7 +584,7 @@ export const platformsPage = {
       role: "Assisted trade capture and validation",
       href: "/confirmiq",
       description:
-        "Extracts broker confirmation details into a generic CTRM-ready structure, flags exceptions, and leaves approval with an authorized reviewer.",
+        "Extracts trade terms from marketer, broker and trader documents into a generic CTRM-ready structure, flags exceptions, and leaves approval with an authorized reviewer.",
     },
     {
       platform: "WinsProposal",
