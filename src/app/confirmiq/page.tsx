@@ -7,12 +7,12 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "ConfirmIQ | Assisted Trade Capture & Validation",
   description:
-    "ConfirmIQ turns broker confirmations into structured, CTRM-ready trade data, with exception review and approval kept with authorized people.",
+    "ConfirmIQ turns trade documents from marketers, brokers and traders into structured, CTRM-ready trade data, with exception review and approval kept with authorized people.",
   path: "/confirmiq",
 });
 
 const workflow = [
-  ["Capture", "Read broker confirmation documents and extract candidate trade terms."],
+  ["Capture", "Read trade confirmations and contract documents from marketers, brokers or traders and extract candidate trade terms."],
   ["Structure", "Map the extracted fields into a generic, CTRM-ready trade record."],
   ["Validate", "Check required fields and surface missing, conflicting or uncertain terms as exceptions."],
   ["Review", "A named reviewer checks the source evidence, resolves exceptions and approves the record."],
@@ -24,7 +24,7 @@ export default function ConfirmIqPage() {
     <>
       <PageHero
         eyebrow="ConfirmIQ · RightSense"
-        title="Broker confirmations to review-ready trade records."
+        title="Trade documents to review-ready CTRM records."
         subtitle="ConfirmIQ is an AI-assisted trade capture and validation workflow for energy and commodity trading teams. It reduces manual rekeying while keeping exception resolution and trade approval with authorized people."
       />
 
@@ -51,7 +51,7 @@ export default function ConfirmIqPage() {
                 <h2 className="text-xl font-semibold text-ink-900">Human approval stays in control</h2>
               </div>
               <ul className="mt-5 space-y-3 text-sm leading-relaxed text-ink-700">
-                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-700" />Reviewers inspect exceptions against the confirmation source.</li>
+                <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-700" />Reviewers inspect exceptions against the original source document.</li>
                 <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-700" />Authorized people approve trade records before handoff.</li>
                 <li className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-700" />The workflow prepares data; it does not autonomously book or approve trades.</li>
               </ul>
@@ -66,7 +66,7 @@ export default function ConfirmIqPage() {
           <h2 className="mt-3 max-w-3xl text-3xl font-semibold text-ink-900">A reviewable path from document to controlled handoff.</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              ["Source evidence", "Keep the source confirmation available alongside extracted fields so reviewers can verify values."],
+              ["Source evidence", "Keep the source document available alongside extracted fields so reviewers can verify values."],
               ["Field validation", "Check required data, formats and internal consistency; route gaps and conflicts to an exception queue."],
               ["Human decision", "Record reviewer resolution and approval before creating the downstream trade record."],
               ["Access and audit", "For a pilot, agree access, retention, reviewer identity and change logging with the customer before data is used."],
@@ -100,7 +100,7 @@ export default function ConfirmIqPage() {
 
       <CTASection
         title="Validate ConfirmIQ on a small, redacted sample."
-        subtitle="Agree representative confirmation formats, a test schema, reviewer controls and a baseline before the pilot. Then assess accuracy, exception handling, review time and CTRM test handoff."
+        subtitle="Agree representative trade documents from marketers, brokers and traders, a test schema, reviewer controls and a baseline before the pilot. Then assess accuracy, exception handling, review time and CTRM test handoff."
         primaryCta={{ label: "Discuss a ConfirmIQ pilot", href: "mailto:contact@rightsense.in?subject=ConfirmIQ%20pilot" }}
         secondaryCta={{ label: "Explore Advaitha commodity trading", href: "https://advaitha.tech/commodity-trading" }}
       />
