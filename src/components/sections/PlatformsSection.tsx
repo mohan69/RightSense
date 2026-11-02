@@ -8,11 +8,12 @@ const canonicalCopy: Record<string, { summary: string; description: string; outc
   PulseIQ: {
     summary: "Industrial Decision & Value Intelligence",
     description:
-      "Connects enterprise evidence and approved external signals to customer commitments so leadership can see what is at risk, why, what can still change and what value was actually protected or recovered.",
+      "Connects enterprise evidence and approved external signals to customer commitments, and adds buying and selling agents that evaluate plant-wide MRP demand, sourcing options, customer demand, capacity and commercial guardrails.",
     outcomes: [
       "Customer-commitment and economic exposure visibility",
       "Governed decisions while there is still time to act",
       "Observed outcomes kept separate from verified value",
+      "Buying priorities and customer responses prepared for human approval",
     ],
   },
   WinsProposal: {

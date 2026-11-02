@@ -132,6 +132,23 @@ export default function PulseIQPage() {
         </div>
       </section>
 
+      <section className="bg-brand-950 text-white">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 lg:grid-cols-[1fr_0.9fr] sm:py-24">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cyan-300">PulseIQ solution · Supply Network Agents</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Coordinate buying across plants and selling against real operating capacity.</h2>
+            <p className="mt-5 text-base leading-8 text-slate-300">For global and regional supply-chain teams, the buying agent consolidates plant-wide MRP requirements and compares net demand with inventory, open purchase orders, supplier reliability, lead times and cost. The selling agent checks RFQs and order requests against stock, production capacity, delivery commitments and approved pricing or margin limits.</p>
+            <p className="mt-4 text-sm leading-7 text-slate-300">A governed pilot starts with an agreed read-only ERP/MRP scope. Procurement and sales owners approve proposed sourcing, purchase or customer-commitment decisions. No autonomous order placement or source-system writeback.</p>
+          </div>
+          <div className="rounded-2xl border border-white/15 bg-white/5 p-7">
+            <p className="text-sm font-semibold text-cyan-200">Illustrative walkthrough</p>
+            <p className="mt-3 text-sm leading-7 text-slate-300">Explore synthetic examples of shortage prioritization, supplier comparison, stock and capacity checks, and approval gates.</p>
+            <a href="https://www.pulseiq.co.in/demo/supply-network-agents" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950">See the buying + selling agents demo <ArrowRight className="h-4 w-4" /></a>
+            <p className="mt-4 text-xs leading-6 text-slate-400">The public demo uses synthetic reference data. Customer-specific source mapping, permissions, approval design and value measures are agreed for each pilot.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-6 py-20 text-center sm:py-24">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-700">Implementation principle</p>
