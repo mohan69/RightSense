@@ -74,14 +74,14 @@ export const platforms = [
   {
     name: "PulseIQ",
     href: "/pulseiq",
-    summary: "Enterprise Operating Intelligence Platform",
+    summary: "Industrial Decision, Value & Supply Network Intelligence",
     icon: "Brain",
     description:
-      "Connects financials, strategy decks, SOPs, enterprise data, Excel trackers, emails, and meetings into an Enterprise Truth Map, executive cockpit, forecasting, what-if scenarios, and board-ready recommendations.",
+      "Connects approved enterprise evidence to customer commitments and economic outcomes. Supply Network Agents help global and regional teams assess plant-wide MRP demand, sourcing options, supplier constraints, customer demand, inventory, capacity and commercial guardrails.",
     outcomes: [
-      "Enterprise Truth Map and executive cockpit",
-      "Forecast next-quarter performance with confidence bands",
-      "Simulate revenue, margin, cash, and productivity scenarios",
+      "Customer commitment and economic exposure visibility",
+      "Buying and selling recommendations grounded in ERP/MRP evidence",
+      "Governed human approvals and verified outcomes",
     ],
   },
   {
@@ -574,10 +574,10 @@ export const platformsPage = {
     },
     {
       platform: "PulseIQ",
-      role: "Initial industrial decision and value intelligence layer",
+      role: "Industrial decision, value and supply-network intelligence",
       href: "/pulseiq",
       description:
-        "Connects the minimum approved evidence to customer commitments, governed decisions and a measurable value record.",
+        "Connects approved enterprise evidence to customer commitments and value. Buying and selling agents surface plant-wide MRP procurement priorities and feasible customer responses for authorized teams to review and approve.",
     },
     {
       platform: "ConfirmIQ",
@@ -603,7 +603,7 @@ export const platformsPage = {
   ] satisfies PortfolioRole[],
   connectionTitle: "How the portfolio connects",
   connectionBody:
-    "Advaitha defines the guardrails and decision rights. Assisted trade capture (ConfirmIQ), revenue intelligence (WinsProposal), operating intelligence (PulseIQ), and workforce intelligence (TalentPulse) support connected enterprise decisions. Use each platform where it fits a defined workflow, with evidence and approval responsibilities made explicit.",
+    "Advaitha defines the guardrails and decision rights. Assisted trade capture (ConfirmIQ), revenue intelligence (WinsProposal), operating intelligence (PulseIQ), and workforce intelligence (TalentPulse) support connected enterprise decisions. PulseIQ can add supply-network agents for plant-wide MRP-based procurement planning and commercially governed customer responses. Use each platform where it fits a defined workflow, with evidence and approval responsibilities made explicit.",
   cta: {
     title: "Start with PulseIQ. Add the others when ready.",
     subtitle:
