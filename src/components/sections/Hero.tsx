@@ -19,7 +19,7 @@ export function Hero() {
         </div>
 
         <h1 className="mt-7 text-4xl sm:text-5xl lg:text-[3.5rem] font-semibold tracking-tight text-white text-balance leading-[1.1]">
-          Enterprise AI. Measurable Business Outcomes.
+          Protect the economics of every engineered customer commitment
         </h1>
 
         <p className="mt-6 text-lg text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
@@ -27,7 +27,7 @@ export function Hero() {
         </p>
 
         <p className="mt-4 text-base text-blue-100/70 max-w-3xl mx-auto leading-relaxed">
-          Start with one economically important problem. PulseIQ provides the initial evidence-to-outcome layer; our founders lead the diagnostic, proof and decision to scale.
+          Prove measurable business value before you scale AI. Start with one economically important problem; our founders lead the evidence, the proof and the decision to scale.
         </p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-blue-100/80">
@@ -37,9 +37,9 @@ export function Hero() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link href="/contact?source=48-hour-diagnostic">
+          <Link href="/contact?source=business-problem-intake">
             <Button size="lg" className="px-7 shadow-lg">
-              Start the 48-Hour Diagnostic
+              Bring Your Business Problem
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>

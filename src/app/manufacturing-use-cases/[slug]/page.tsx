@@ -106,8 +106,8 @@ export default async function ManufacturingUseCasePage({ params }: { params: Pro
       </article>
       <CTASection
         title="Test this use case against your actual baseline"
-        subtitle="Bring the current workflow, a named owner and the evidence available today. RightSense will confirm whether the 48-hour diagnostic is the right next step."
-        primaryCta={{ label: "Start a Diagnostic Request", href: "/contact?source=48-hour-diagnostic" }}
+        subtitle="Bring the current workflow, a named owner and the evidence available today. RightSense will confirm whether a business-problem proof is the right next step."
+        primaryCta={{ label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" }}
         secondaryCta={{ label: "Explore all use cases", href: "/manufacturing-use-cases" }}
       />
     </>

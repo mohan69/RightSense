@@ -8,7 +8,7 @@ import { primaryNav, siteConfig } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const marketNav = primaryNav.filter((item) => ["/manufacturing-use-cases", "/48-hour-diagnostic", "/about"].includes(item.href));
+const marketNav = primaryNav.filter((item) => ["/manufacturing-use-cases", "/proof", "/about"].includes(item.href));
 const productNav = primaryNav.filter((item) => ["/pulseiq", "/winsproposal"].includes(item.href));
 
 export function Nav() {
@@ -58,7 +58,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-2">
-          <Link href="/contact?source=48-hour-diagnostic"><Button size="sm">Start the Diagnostic</Button></Link>
+          <Link href="/contact?source=business-problem-intake"><Button size="sm">Bring Your Business Problem</Button></Link>
         </div>
 
         <button
@@ -102,8 +102,8 @@ export function Nav() {
             <a href="https://advaitha.tech/" onClick={closeMenu} className="rounded-md px-3 py-2 text-sm font-medium text-ink-700 hover:bg-canvas">
               Advaitha
             </a>
-            <Link href="/contact?source=48-hour-diagnostic" onClick={closeMenu} className="mt-2">
-              <Button className="w-full">Start the Diagnostic</Button>
+            <Link href="/contact?source=business-problem-intake" onClick={closeMenu} className="mt-2">
+              <Button className="w-full">Bring Your Business Problem</Button>
             </Link>
           </nav>
         </div>

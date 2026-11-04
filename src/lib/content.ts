@@ -49,13 +49,12 @@ export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Process Redesign", href: "/ai-process-redesign" },
   { label: "Use Cases", href: "/manufacturing-use-cases" },
-  { label: "Diagnostic", href: "/48-hour-diagnostic" },
+  { label: "Proof", href: "/proof" },
   { label: "Moat", href: "/moat" },
   { label: "Platforms", href: "/platforms" },
   { label: "PulseIQ", href: "/pulseiq" },
   { label: "WinsProposal", href: "/winsproposal" },
   { label: "TalentPulse", href: "/talentpulse" },
-  { label: "Assessment", href: "/assessment" },
   { label: "Industries", href: "/industries" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -140,12 +139,12 @@ export const ecosystemAdvaitha = {
 
 export const hero: HeroContent = {
   eyebrow: "Enterprise AI for manufacturing and project businesses.",
-  headline: "Enterprise AI. Measurable Business Outcomes.",
+  headline: "Protect the economics of every engineered customer commitment.",
   subheadline:
     "RightSense helps manufacturing, EPC, valve and pump businesses connect operational evidence to the decisions that protect revenue, margin, delivery and cash.",
   support:
-    "Start with one economically important problem. PulseIQ provides the initial evidence-to-outcome layer; our founders lead the diagnostic, proof and decision to scale.",
-  primaryCta: { label: "Start the 48-Hour Diagnostic", href: "/contact?source=48-hour-diagnostic" },
+    "Prove measurable business value before you scale AI. Start with one economically important problem; our founders lead the evidence, the proof and the decision to scale.",
+  primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
   secondaryCta: { label: "See Two Use Cases", href: "/#featured-use-cases" },
 };
 
@@ -365,9 +364,9 @@ export const diagnostic: {
   deliverables: string[];
   cta: CtaLink;
 } = {
-  title: "The 48-Hour Outcome Diagnostic, powered by PulseIQ.",
+  title: "The Business-Problem Proof, powered by PulseIQ.",
   subtitle:
-    "A tightly scoped working session for one plant, project, product family or order cohort. The 48-hour clock starts after the agreed inputs are available.",
+    "A tightly scoped working session for one plant, project, product family or order cohort. The proof starts once the agreed inputs are available.",
   steps: [
     {
       num: "01",
@@ -411,7 +410,7 @@ export const diagnostic: {
     "Baseline KPI dictionary and illustrative value model",
     "Ranked intervention options and a practical 30-day proof plan",
   ],
-  cta: { label: "Review Scope & Deliverables", href: "/48-hour-diagnostic" },
+  cta: { label: "Review Scope & Deliverables", href: "/contact?source=business-problem-intake" },
 };
 
 export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
@@ -429,8 +428,8 @@ export const howItWorks: SectionContent & { steps: HowItWorksStep[] } = {
 export const ctaSection = {
   title: "Move from fragmented data to a connected, board-ready view of your enterprise.",
   subtitle:
-    "Start with a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic. No long transformation program. No generic AI demo. Just a focused diagnostic with decisions leadership can act on.",
-  primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
+    "Start with one economically important problem. No long transformation program. No generic AI demo. Prove measurable business value before you scale AI.",
+  primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
   secondaryCta: { label: "Talk to a Co-Founder", href: "/about" },
 } as const;
 
@@ -548,8 +547,8 @@ export const moatPage: MoatPageContent = {
   cta: {
     title: "See the moat in action.",
     subtitle:
-      "Book a 48-Hour Diagnostic and watch the truth map come together in your business.",
-    primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
+      "Bring one business problem and watch the evidence come together in your business.",
+    primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
     secondaryCta: { label: "Explore Platforms", href: "/platforms" },
   },
 };
@@ -609,7 +608,7 @@ export const platformsPage = {
     subtitle:
       "For the initial manufacturing cohort, PulseIQ is the primary evidence-to-outcome entry layer. WinsProposal is introduced when the first measurable problem sits in RFQ, proposal or pricing performance.",
     primaryCta: { label: "Explore PulseIQ", href: "/pulseiq" },
-    secondaryCta: { label: "Start the Diagnostic", href: "/contact?source=48-hour-diagnostic" },
+    secondaryCta: { label: "Start the Diagnostic", href: "/contact?source=business-problem-intake" },
   },
 } as const;
 
@@ -784,9 +783,9 @@ export const pulseiqPage = {
           "A 2-week workbench engagement that maps the operating model and produces a 90-day execution plan.",
       },
       {
-        title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
+        title: "RightSense Business-Problem Proof, powered by PulseIQ.",
         description:
-          "A focused 48-hour engagement that delivers a board-ready view of enterprise truth.",
+          "A focused, contained proof engagement that delivers a board-ready view of enterprise truth.",
       },
     ] satisfies DeploymentOption[],
   },
@@ -806,10 +805,10 @@ export const pulseiqPage = {
     ],
   },
   cta: {
-    title: "See PulseIQ in your business, in 48 hours.",
+    title: "See PulseIQ in your business, on one economically important problem.",
     subtitle:
       "Bring your financials, your strategy deck, and your Excel trackers. Leave with a board-ready view of enterprise truth.",
-    primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
+    primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
     secondaryCta: { label: "Visit PulseIQ.co.in", href: "https://www.pulseiq.co.in/" },
   },
 } as const;
@@ -997,7 +996,7 @@ export const talentpulsePage = {
     title: "See TalentPulse in your hiring funnel.",
     subtitle:
       "Visit the TalentPulse product site or talk to our team about a talent intelligence pilot.",
-    primaryCta: { label: "Discuss Talent Intelligence", href: "https://www.rightsense.in/48-hour-diagnostic" },
+    primaryCta: { label: "Discuss Talent Intelligence", href: "https://pulseiq.co.in/book-demo" },
     secondaryCta: { label: "Talk to our team", href: "/contact" },
   },
 } as const;
@@ -1005,9 +1004,9 @@ export const talentpulsePage = {
 export const assessmentPage = {
   hero: {
     eyebrow: "RightSense flagship engagement",
-    title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
+    title: "RightSense Business-Problem Proof, powered by PulseIQ.",
     subtitle:
-      "Our first sellable offer: a 48-hour, executive-grade engagement that delivers a board-ready view of enterprise truth.",
+      "A contained, executive-grade proof engagement that delivers a board-ready view of enterprise truth.",
   },
   whoItsFor: {
     title: "Who it is for",
@@ -1048,7 +1047,7 @@ export const assessmentPage = {
     ],
   },
   process: {
-    title: "How the 48 hours are spent",
+    title: "How the proof engagement is spent",
     steps: [
       {
         num: "01",
@@ -1115,10 +1114,10 @@ export const assessmentPage = {
     ] satisfies PlanPhase[],
   },
   cta: {
-    title: "Book a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic",
+    title: "Bring one economically important business problem",
     subtitle:
       "Bring the sources you already have. Leave with a board-ready view of enterprise truth, business gaps, forecast scenarios, and a 90-day action plan.",
-    primaryCta: { label: "Book a 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
+    primaryCta: { label: "Bring Your Business Problem", href: "https://pulseiq.co.in/book-demo" },
   },
   whenLeadershipNeedsThis: {
     title: "Signs Leadership Needs This Diagnostic Now",
@@ -1161,9 +1160,9 @@ export const assessmentPage = {
     ],
   } satisfies SampleOutput,
   midCta: {
-    title: "Want to know what your data can reveal in 48 hours?",
-    primaryCta: { label: "Book Diagnostic Call", href: "/48-hour-diagnostic" },
-    secondaryCta: { label: "Ask What Data Is Needed", href: "/48-hour-diagnostic" },
+    title: "Want to know what your evidence can reveal in a contained proof?",
+    primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
+    secondaryCta: { label: "Ask What Evidence Is Needed", href: "/contact?source=business-problem-intake" },
   } as const,
   minimumRequired: {
     title: "Minimum required to start",
@@ -1194,7 +1193,7 @@ export const assessmentPage = {
 export const diagnosticPage: DiagnosticPageContent = {
   hero: {
     eyebrow: "RightSense",
-    title: "RightSense 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic, powered by PulseIQ.",
+    title: "RightSense Business-Problem Proof, powered by PulseIQ.",
     subtitle:
       "A focused entry engagement, powered by PulseIQ, that connects your fragmented systems, documents, and decisions into a board-ready view of enterprise truth — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
   },
@@ -1211,7 +1210,7 @@ export const diagnosticPage: DiagnosticPageContent = {
   painSection: {
     title: "The handoffs are where work gets stuck.",
     subtitle:
-      "An order can wait on a drawing, a supplier update or an approval while everyone works from a different tracker. Redesigning the process means changing who sees the evidence, who decides and how the next action happens. The 48-Hour Diagnostic cuts through this in two days.",
+      "An order can wait on a drawing, a supplier update or an approval while everyone works from a different tracker. Redesigning the process means changing who sees the evidence, who decides and how the next action happens. A contained proof cuts through this.",
     points: [
       "ERPs, CRMs, HRMS, and MES speak different languages and never reconcile cleanly",
       "Financial reports, operational data, and strategic plans tell three different stories — and none match",
@@ -1242,7 +1241,7 @@ export const diagnosticPage: DiagnosticPageContent = {
     ],
   },
   pillarsSection: {
-    title: "Six pillars of the 48-Hour Diagnostic",
+    title: "Six pillars of the diagnostic",
     subtitle:
       "The diagnostic examines your business across six connected dimensions. Each pillar produces a quantified readiness score, gap analysis, and prioritized improvement actions.",
     pillars: [
@@ -1322,7 +1321,7 @@ export const diagnosticPage: DiagnosticPageContent = {
     ],
   },
   process: {
-    title: "How the 48 hours are structured",
+    title: "How the engagement is structured",
     steps: [
       {
         num: "01",
@@ -1454,10 +1453,10 @@ export const diagnosticPage: DiagnosticPageContent = {
     ],
   },
   cta: {
-    title: "Book a 48-Hour Enterprise Intelligence, Compliance & Standards Diagnostic",
+    title: "Bring one economically important business problem",
     subtitle:
       "Bring your business question, your financials, your compliance documentation, and your strategy deck. We will show you what connected enterprise truth looks like — across revenue, operations, margin, compliance, vendor ecosystem, and AI governance.",
-    primaryCta: { label: "Book 48-Hour Diagnostic", href: "/48-hour-diagnostic" },
+    primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
     secondaryCta: { label: "Talk to a Co-Founder", href: "/about" },
   },
   disclaimer:
@@ -1477,8 +1476,8 @@ export const industriesPageCta: PageCta = {
   title: "See RightSense in your industry.",
   subtitle:
     "Bring the operating model, the data, and the question you are trying to answer. We will show you what the truth map looks like in your business.",
-  primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
-  secondaryCta: { label: "See the Assessment", href: "/48-hour-diagnostic" },
+  primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
+  secondaryCta: { label: "See the Assessment", href: "https://pulseiq.co.in/book-demo" },
 };
 
 export const industriesDetailed: IndustryDetail[] = [
@@ -1721,10 +1720,10 @@ export const aboutPage = {
     body: "We start small, prove value quickly, and expand only when the business case is clear.",
   },
   cta: {
-    title: "Start a 48-Hour Diagnostic conversation.",
+    title: "Start a business-problem conversation.",
     subtitle:
       "Bring your business question, your financials, and your strategy deck. We will show you what the truth map looks like in your business.",
-    primaryCta: { label: "Book a Diagnostic", href: "/48-hour-diagnostic" },
+    primaryCta: { label: "Bring Your Business Problem", href: "/contact?source=business-problem-intake" },
   },
 } as const;
 
@@ -1733,7 +1732,7 @@ export const contactPage = {
     eyebrow: "Contact",
     title: "Bring one economically important problem",
     subtitle:
-      "Send a short description of the decision or workflow affecting revenue, margin, delivery, cash or productivity. A RightSense co-founder will review the fit.",
+      "This is a business intake, not a technical questionnaire. Tell us the management question and what is economically at risk. No production credentials are required for the first conversation; a RightSense co-founder will review the fit.",
   },
   details: {
     email: "mohan@rightsense.in",
@@ -1787,8 +1786,22 @@ export const contactPage = {
       ],
     },
     {
+      name: "businessRisk",
+      label: "Which business risk should we look at first?",
+      type: "select",
+      required: true,
+      options: [
+        "Customer distress",
+        "Supplier / sub-tier risk",
+        "Logistics / external disruption",
+        "Revenue & margin",
+        "Delivery confidence",
+        "Shipment & cash",
+      ],
+    },
+    {
       name: "challenge",
-      label: "Priority problem and measurable outcome",
+      label: "What is economically at risk, and what outcome should we prove?",
       type: "textarea",
       required: true,
       placeholder: "For example: project milestones slip when engineering releases and supplier dates are not reconciled. We want to improve risk lead time and on-time billing.",

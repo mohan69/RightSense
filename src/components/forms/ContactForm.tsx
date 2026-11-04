@@ -8,7 +8,7 @@ import type { FormField } from "@/types/site";
 const DEFAULT_SUBJECT = "RightSense — Business Outcome Conversation";
 
 const sourceLabels: Record<string, string> = {
-  "48-hour-diagnostic": "48-Hour Outcome Diagnostic",
+  "business-problem-intake": "Business Problem Intake (Proof-First)",
   "pulseiq-founding-cohort": "PulseIQ Founding Cohort",
   "founder-conversation": "Founder Conversation",
   "winsproposal-rfq-proof": "WinsProposal RFQ Proof",
